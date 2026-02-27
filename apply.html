@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Balancewise Technologies — Apply to work with us as a DevOps engineer, data analyst, cloud specialist, ML professional, developer or open source contributor.">
+  <title>Join Our Team — Balancewise Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .apply-roles { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-bottom:3.5rem; }
+    .apply-card { background:var(--white); border:1px solid var(--border); border-radius:14px; padding:2rem; transition:all 0.3s; display:flex; flex-direction:column; }
+    .apply-card:hover { border-color:#bfdbfe; transform:translateY(-4px); box-shadow:0 12px 40px rgba(37,99,235,0.08); }
+    .apply-card.oss { border-color:#bfdbfe; background:#f0f7ff; }
+    .ac-icon { font-size:2rem; margin-bottom:0.75rem; }
+    .ac-type { display:inline-block; background:#eff6ff; color:var(--accent); font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.2rem 0.6rem; border-radius:4px; margin-bottom:0.75rem; }
+    .ac-title { font-size:1.05rem; font-weight:700; margin-bottom:0.5rem; color:var(--dark); }
+    .ac-desc { font-size:0.85rem; color:var(--text); line-height:1.65; margin-bottom:1.25rem; flex:1; }
+    .ac-skills { display:flex; flex-wrap:wrap; gap:0.3rem; margin-bottom:1.5rem; }
+    .ac-skill { background:var(--bg); border:1px solid var(--border); color:var(--text2); font-size:0.65rem; font-weight:500; padding:0.2rem 0.55rem; border-radius:4px; }
+    .ac-link { font-size:0.82rem; font-weight:700; color:var(--accent); text-decoration:none; transition:letter-spacing 0.2s; }
+    .ac-link:hover { letter-spacing:0.05em; }
+    .apply-form-box { background:var(--white); border:1px solid var(--border); border-radius:16px; padding:3rem; max-width:720px; margin:0 auto; box-shadow:0 4px 40px rgba(10,31,92,0.05); }
+    .apply-form-box h3 { font-size:1.4rem; font-weight:800; color:var(--dark); margin-bottom:0.4rem; }
+    .apply-form-box > p { font-size:0.875rem; color:var(--text); margin-bottom:2rem; }
+    .os-banner { background:linear-gradient(135deg,var(--blue),var(--blue2)); border-radius:14px; padding:2.5rem; text-align:center; margin-bottom:3rem; }
+    @media(max-width:900px){ .apply-roles{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:600px){ .apply-roles{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<div id="cursor"></div><div id="cursorRing"></div>
+<div class="toast" id="toast"></div>
+<nav>
+  <a href="../index.html" class="nav-logo">Balancewise <span>Technologies</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="staffing.html">Staffing</a></li>
+    <li><a href="ai.html">AI Solutions</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="apply.html" class="active">Join Us</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div><div class="page-hero-glow"></div>
+  <div class="page-hero-content">
+    <div class="page-eyebrow">Join Our Team</div>
+    <h1>Would You Like to<br><em>Be Part of Us?</em></h1>
+    <p>We are always looking for talented IT professionals to join our growing network. Whether you want a long-term position, project work or to contribute to open source — we would love to hear from you. Every application is reviewed personally.</p>
+  </div>
+</div>
+
+<div class="ticker"><div class="ticker-inner"><span>DevOps Engineers</span><span class="ticker-sep">◆</span><span>Data Analysts</span><span class="ticker-sep">◆</span><span>Cloud Specialists</span><span class="ticker-sep">◆</span><span>ML Professionals</span><span class="ticker-sep">◆</span><span>Open Source Contributors</span><span class="ticker-sep">◆</span><span>Developers</span><span class="ticker-sep">◆</span><span>DevOps Engineers</span><span class="ticker-sep">◆</span><span>Data Analysts</span><span class="ticker-sep">◆</span></div></div>
+
+<section class="section-off">
+  <div class="container">
+    <div class="section-header center">
+      <span class="eyebrow reveal">Open Positions</span>
+      <h2 class="section-title reveal">Roles We Are <em>Looking to Fill</em></h2>
+      <p class="section-sub reveal" style="margin:0 auto">All contract types are open for each role — temporary, permanent, freelance or project-based. Tell us what works for you.</p>
+    </div>
+
+    <div class="os-banner reveal">
+      <div style="font-size:1.5rem;margin-bottom:0.5rem">🌍</div>
+      <h3 style="font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:0.5rem">We Build in the Open</h3>
+      <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto 1.5rem;line-height:1.7">We believe in open collaboration and meaningful work. All skill levels are welcome. Our projects are open source on GitHub — so you can see exactly what we build before you apply.</p>
+      <a href="https://github.com/BalancewiseLtd" target="_blank" class="btn-white">View Our GitHub →</a>
+    </div>
+
+    <div class="apply-roles">
+      <div class="apply-card reveal">
+        <div class="ac-icon">⚙️</div><div class="ac-type">All Contract Types</div>
+        <h3 class="ac-title">DevOps / Infrastructure</h3>
+        <p class="ac-desc">Experience with CI/CD pipelines, containerisation (Docker/Kubernetes), Linux administration and cloud platforms. Comfortable working in fast-paced environments with multiple projects running simultaneously.</p>
+        <div class="ac-skills"><span class="ac-skill">Docker</span><span class="ac-skill">Kubernetes</span><span class="ac-skill">Jenkins</span><span class="ac-skill">Azure</span><span class="ac-skill">Linux</span><span class="ac-skill">Terraform</span></div>
+        <a href="#applyForm" class="ac-link">Apply Now →</a>
+      </div>
+      <div class="apply-card reveal" data-delay="0.08">
+        <div class="ac-icon">📊</div><div class="ac-type">All Contract Types</div>
+        <h3 class="ac-title">Data Analyst</h3>
+        <p class="ac-desc">Strong analytical skills with data wrangling, visualisation and reporting experience. Ability to communicate insight clearly to non-technical stakeholders. Comfortable with large, messy datasets.</p>
+        <div class="ac-skills"><span class="ac-skill">Python</span><span class="ac-skill">SQL</span><span class="ac-skill">Power BI</span><span class="ac-skill">Tableau</span><span class="ac-skill">Excel</span></div>
+        <a href="#applyForm" class="ac-link">Apply Now →</a>
+      </div>
+      <div class="apply-card reveal" data-delay="0.16">
+        <div class="ac-icon">☁️</div><div class="ac-type">All Contract Types</div>
+        <h3 class="ac-title">Cloud Specialist</h3>
+        <p class="ac-desc">Hands-on experience with Microsoft Azure, cloud security, identity management and infrastructure as code. Azure certifications are a strong advantage.</p>
+        <div class="ac-skills"><span class="ac-skill">Azure</span><span class="ac-skill">AWS</span><span class="ac-skill">Entra ID</span><span class="ac-skill">IaC</span><span class="ac-skill">Security</span></div>
+        <a href="#applyForm" class="ac-link">Apply Now →</a>
+      </div>
+      <div class="apply-card reveal" data-delay="0.24">
+        <div class="ac-icon">🤖</div><div class="ac-type">All Contract Types</div>
+        <h3 class="ac-title">ML / AI Professional</h3>
+        <p class="ac-desc">Experience building and deploying ML models. Familiarity with NLP, computer vision or predictive analytics is a strong advantage. Comfortable translating research into production systems.</p>
+        <div class="ac-skills"><span class="ac-skill">Python</span><span class="ac-skill">TensorFlow</span><span class="ac-skill">PyTorch</span><span class="ac-skill">NLP</span><span class="ac-skill">Scikit-learn</span></div>
+        <a href="#applyForm" class="ac-link">Apply Now →</a>
+      </div>
+      <div class="apply-card reveal" data-delay="0.32">
+        <div class="ac-icon">💻</div><div class="ac-type">All Contract Types</div>
+        <h3 class="ac-title">Software Developer</h3>
+        <p class="ac-desc">Backend or full-stack development with REST API, database design and clean code experience. PHP, Node.js or Python background preferred. Postman testing experience valued.</p>
+        <div class="ac-skills"><span class="ac-skill">PHP</span><span class="ac-skill">Node.js</span><span class="ac-skill">React</span><span class="ac-skill">MySQL</span><span class="ac-skill">REST API</span></div>
+        <a href="#applyForm" class="ac-link">Apply Now →</a>
+      </div>
+      <div class="apply-card oss reveal" data-delay="0.4">
+        <div class="ac-icon">🔓</div><div class="ac-type">Voluntary / Portfolio</div>
+        <h3 class="ac-title">Open Source Contributor</h3>
+        <p class="ac-desc">Want to build your portfolio with real, meaningful work? Contribute to our open source projects. Any skill level is welcome — good first issues are available on GitHub. Great for building your CV.</p>
+        <div class="ac-skills"><span class="ac-skill">Any Language</span><span class="ac-skill">GitHub</span><span class="ac-skill">Documentation</span><span class="ac-skill">Testing</span></div>
+        <a href="https://github.com/BalancewiseLtd" target="_blank" class="ac-link">View on GitHub →</a>
+      </div>
+    </div>
+
+    <!-- APPLICATION FORM -->
+    <div class="apply-form-box reveal" id="applyForm">
+      <h3>Submit Your Application</h3>
+      <p>All applications are reviewed personally. We respond to every submission — usually within 48 hours.</p>
+      <form id="applicationForm" class="modern-form" action="https://formspree.io/f/xkoveoyr" method="POST">
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="fullname" placeholder="Jane Smith" required></div>
+          <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="jane@email.com" required></div>
+        </div>
+        <div class="form-group">
+          <label>Role You Are Applying For *</label>
+          <select name="role" required>
+            <option value="">Select a role...</option>
+            <option>DevOps / Infrastructure Engineer</option>
+            <option>Data Analyst</option>
+            <option>Cloud Specialist</option>
+            <option>Machine Learning / AI Professional</option>
+            <option>AI Implementation Specialist</option>
+            <option>Software Developer</option>
+            <option>Open Source Contributor</option>
+            <option>Other — I will explain below</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>GitHub Profile</label><input type="url" name="github" placeholder="https://github.com/username"></div>
+          <div class="form-group"><label>LinkedIn Profile</label><input type="url" name="linkedin" placeholder="https://linkedin.com/in/..."></div>
+        </div>
+        <div class="form-group">
+          <label>Tell Us About Yourself *</label>
+          <textarea name="message" rows="5" placeholder="Describe your experience, what you are looking for and why you want to work with Balancewise Technologies..." required></textarea>
+        </div>
+        <button type="submit" id="applySubmit" data-label="Submit Application">Submit Application</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo-text">Balancewise <span>Technologies</span></div><p class="footer-about">IT staffing, software development, cloud computing and AI integration. Newcastle, UK. Part of Balancewise Ltd.</p><div class="footer-reg"><strong>Balancewise Ltd</strong><br>Company No. 16164776 · VAT No. GB483493947<br>ICO Ref: ZB973909 · 27 Old Gloucester Street, London WC1N 3AX</div></div>
+      <div><div class="footer-col-title">Join Us</div><ul class="footer-links"><li><a href="apply.html">Open Roles</a></li><li><a href="https://github.com/BalancewiseLtd" target="_blank">GitHub</a></li><li><a href="team.html">Meet the Team</a></li></ul></div>
+      <div><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="staffing.html">IT Staffing</a></li><li><a href="services.html">Development</a></li><li><a href="ai.html">AI Solutions</a></li></ul></div>
+      <div><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="mailto:info@balancewises.io">info@balancewises.io</a></li><li><a href="tel:07308864152">07308 864152</a></li><li><a href="contact.html">Enquire</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">© 2026 Balancewise Ltd. Company No. 16164776.</div><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="../js/shared.js"></script>
+<script>
+
+</script>
+</body>
+</html>
