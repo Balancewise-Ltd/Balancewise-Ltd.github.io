@@ -158,36 +158,8 @@ function hookForm(formId, btnId, apiUrl) {
   });
 }
 
-// Contact form — JSON (no file upload)
 hookForm('contactForm', 'contactBtn', 'https://formspree.io/f/xkoveoyr');
-
-// Apply form — FormData (supports CV file upload)
-const applyForm = document.getElementById('applyForm');
-if (applyForm) {
-  applyForm.addEventListener('submit', async e => {
-    e.preventDefault();
-    const btn = document.getElementById('applyBtn');
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-    try {
-      const response = await fetch('https://formspree.io/f/xkoveoyr', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(applyForm)
-      });
-      if (response.ok) {
-        showToast('Application received! We will be in touch shortly.');
-        applyForm.reset();
-      } else {
-        showToast('Something went wrong. Please email info@balancewises.io', true);
-      }
-    } catch {
-      showToast('Could not send. Please email info@balancewises.io', true);
-    }
-    btn.disabled = false;
-    btn.textContent = 'Submit Application';
-  });
-}
+hookForm('applyForm',   'applyBtn',   'https://formspree.io/f/xkoveoyr');
 
 // Input validation visual feedback
 document.querySelectorAll('input[required], textarea[required]').forEach(el => {
