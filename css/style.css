@@ -976,6 +976,9 @@ footer {
 @media (max-width: 960px) {
   .theme-toggle { display: none; }        /* ← ADDED THIS */
   .nav-theme-item { display: block; }     /* ← ADDED THIS */
+  .nav-brand { font-size: 0.85rem; }
+  .hero-badge { font-size: 0.6rem; letter-spacing: 0.08em; padding: 0.4rem 0.75rem; }
+  .hero { padding: 7rem 4% 4rem; }
   .nav-menu { display: none; }
   .nav-hamburger { display: flex; }
   .nav-menu.open {
@@ -1011,4 +1014,19 @@ footer {
   .page-hero h1 { font-size: 2rem; }
   .hero-h1 { font-size: 2.2rem; }
   .team-network { flex-direction: column; text-align: center; }
+}
+@media (max-width: 420px) {
+  .nav-brand { font-size: 0.75rem; }
+  .hero-h1 { font-size: 1.85rem; line-height: 1.1; }
+  .hero-badge {
+    font-size: 0.55rem;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.65rem;
+    white-space: normal;
+    text-align: center;
+  }
+  .hero-p { font-size: 0.9rem; }
+  .hero-btns { gap: 0.5rem; }
+  .btn { padding: 0.75rem 1.25rem; font-size: 0.8rem; }
+  section { padding: 3.5rem 4%; }
 }
