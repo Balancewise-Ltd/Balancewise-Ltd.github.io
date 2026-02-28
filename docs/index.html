@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT staffing, software, cloud and AI services — Newcastle, UK.">
+  <meta property="og:title" content="Expert IT Talent & Technology Services On Demand | Balancewise Technologies">
+  <meta property="og:description" content="IT staffing, software, cloud and AI services — Newcastle, UK.">
+  <meta property="og:url" content="https://balancewises.io/index.html">
+  <meta property="og:type" content="website">
+  <title>Expert IT Talent & Technology Services On Demand | Balancewise Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="cursor"></div>
+  <div id="cursorRing"></div>
+  <div class="toast" id="toast"></div>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-brand">Balancewise <em>Technologies</em></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="staffing.html">Staffing</a></li>
+      <li><a href="ai.html">AI Solutions</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="apply.html">Join Us</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark / light mode">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zm9-9h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zM5 12a1 1 0 0 1-1 1H2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1zm11.95-5.54 1.41-1.41a1 1 0 0 1 1.42 1.41L18.36 7.88a1 1 0 0 1-1.41-1.42zm-12.68 10.6L2.86 18.47a1 1 0 0 1 1.41-1.41l1.41 1.41a1 1 0 0 1-1.41 1.41zM18.36 16.12l1.41 1.41a1 1 0 0 1-1.41 1.41l-1.41-1.41a1 1 0 0 1 1.41-1.41zM4.22 7.05 5.64 8.46A1 1 0 0 1 4.22 9.88L2.81 8.46a1 1 0 0 1 1.41-1.41z"/></svg>
+      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge rev">
+        <span class="badge-dot"></span>
+        Newcastle, UK &nbsp;&middot;&nbsp; Available UK-Wide &nbsp;&middot;&nbsp; VAT &amp; ICO Registered
+      </div>
+      <h1 class="hero-h1 rev" data-delay=".06">
+        Expert IT Talent &amp;<br>Technology Services<br><em>On Demand.</em>
+      </h1>
+      <p class="hero-p rev" data-delay=".12">
+        Balancewise Technologies supplies experienced IT professionals to businesses across the UK &mdash; on temporary contracts, permanent placements and freelance engagements. We also build software, websites, cloud infrastructure and deploy AI directly into your workplace.
+      </p>
+      <div class="hero-btns rev" data-delay=".18">
+        <a href="contact.html" class="btn btn-white">Hire IT Talent</a>
+        <a href="apply.html" class="btn btn-ghost">Join Our Team</a>
+        <a href="services.html" class="btn btn-ghost">Our Services</a>
+      </div>
+      <div class="hero-pills rev" data-delay=".24">
+        <span class="hero-pill">&#10003; Temporary</span>
+        <span class="hero-pill">&#10003; Permanent</span>
+        <span class="hero-pill">&#10003; Freelance</span>
+        <span class="hero-pill">&#10003; AI Integration</span>
+        <span class="hero-pill">&#10003; Open Source</span>
+      </div>
+    </div>
+
+    <div class="hero-panel rev-r">
+      <div class="panel-label">Live Team Availability</div>
+      <div class="panel-rows">
+        <div class="panel-row"><span></span><span>DevOps Engineer</span><span>Available</span></div>
+        <div class="panel-row"><span></span><span>Data Analyst</span><span>Available</span></div>
+        <div class="panel-row"><span></span><span>Cloud Specialist</span><span>Available</span></div>
+        <div class="panel-row"><span></span><span>ML Professional</span><span>Available</span></div>
+        <div class="panel-row"><span></span><span>AI Specialist</span><span>Available</span></div>
+        <div class="panel-row"><span></span><span>Backend Developer</span><span>Available</span></div>
+      </div>
+      <div class="panel-divider"></div>
+      <div class="panel-chips">
+        <span class="panel-chip">Temporary</span>
+        <span class="panel-chip">Permanent</span>
+        <span class="panel-chip gold">Freelance</span>
+        <span class="panel-chip gold">Project</span>
+      </div>
+      <div class="panel-divider"></div>
+      <a href="contact.html" class="btn btn-white" style="width:100%;text-align:center;display:block">Get a Free Quote &rarr;</a>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>IT Staffing</span><span class="ticker-sep">&#9670;</span>
+      <span>Software Development</span><span class="ticker-sep">&#9670;</span>
+      <span>Cloud Computing</span><span class="ticker-sep">&#9670;</span>
+      <span>AI in the Workplace</span><span class="ticker-sep">&#9670;</span>
+      <span>DevOps Engineering</span><span class="ticker-sep">&#9670;</span>
+      <span>Data Analytics</span><span class="ticker-sep">&#9670;</span>
+      <span>Machine Learning</span><span class="ticker-sep">&#9670;</span>
+      <span>Temporary Contracts</span><span class="ticker-sep">&#9670;</span>
+      <span>Permanent Placements</span><span class="ticker-sep">&#9670;</span>
+      <span>Open Source</span><span class="ticker-sep">&#9670;</span>
+      <span>IT Staffing</span><span class="ticker-sep">&#9670;</span>
+      <span>Software Development</span><span class="ticker-sep">&#9670;</span>
+      <span>Cloud Computing</span><span class="ticker-sep">&#9670;</span>
+      <span>AI in the Workplace</span><span class="ticker-sep">&#9670;</span>
+      <span>DevOps Engineering</span><span class="ticker-sep">&#9670;</span>
+      <span>Data Analytics</span><span class="ticker-sep">&#9670;</span>
+    </div>
+  </div>
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow rev">What We Deliver</span>
+          <h2 class="section-title rev" data-delay=".06">Everything Your Business<br><em>Needs to Grow</em></h2>
+        </div>
+        <p class="section-desc rev" data-delay=".12">From placing a specialist contractor to shipping a complete software product &mdash; we cover everything your business needs.</p>
+      </div>
+      <div class="services-grid">
+        <a href="staffing.html" class="service-card rev" data-delay="0">
+          <div class="service-icon">&#128101;</div>
+          <h3>IT Staff Placement</h3>
+          <p>Temporary, permanent and freelance IT professionals &mdash; vetted, ready to contribute from day one.</p>
+          <span class="service-link">Learn more &rarr;</span>
+        </a>
+        <a href="services.html" class="service-card rev" data-delay=".07">
+          <div class="service-icon">&#127760;</div>
+          <h3>Web &amp; App Development</h3>
+          <p>Custom websites, REST APIs and web applications built in-house to your exact specification.</p>
+          <span class="service-link">Learn more &rarr;</span>
+        </a>
+        <a href="services.html" class="service-card rev" data-delay=".14">
+          <div class="service-icon">&#9729;&#65039;</div>
+          <h3>Cloud Computing</h3>
+          <p>Microsoft Azure, Entra ID, DNS management and infrastructure from the ground up.</p>
+          <span class="service-link">Learn more &rarr;</span>
+        </a>
+        <a href="ai.html" class="service-card rev" data-delay=".21">
+          <div class="service-icon">&#129302;</div>
+          <h3>AI in the Workplace</h3>
+          <p>Local Claude AI, custom agents and automated workflows deployed directly into your business.</p>
+          <span class="service-link">Learn more &rarr;</span>
+        </a>
+        <a href="services.html" class="service-card rev" data-delay=".28">
+          <div class="service-icon">&#128202;</div>
+          <h3>Data &amp; Analytics</h3>
+          <p>Pipelines, dashboards, machine learning models and business intelligence solutions.</p>
+          <span class="service-link">Learn more &rarr;</span>
+        </a>
+        <a href="services.html" class="service-card rev" data-delay=".35">
+          <div class="service-icon">&#9881;&#65039;</div>
+          <h3>DevOps &amp; Infrastructure</h3>
+          <p>CI/CD, containerisation, server management and infrastructure automation at scale.</p>
+          <span class="service-link">Learn more &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-navy" id="contribute">
+    <div class="container">
+      <div class="contribute-wrap">
+        <span class="eyebrow eyebrow-light rev">Open Collaboration</span>
+        <h2 class="section-title section-title-light rev" data-delay=".06">We Build in the Open.<br><em>Everyone Is Welcome.</em></h2>
+        <p class="section-desc section-desc-light rev" data-delay=".12" style="margin:0 auto">Our software projects are open source &mdash; whether you are an experienced engineer or building your portfolio, there is a place for you here. Meaningful work, real projects, remote friendly.</p>
+        <div class="contribute-tags rev" data-delay=".18">
+          <span>Open Source</span><span>Pull Requests Welcome</span>
+          <span>Good First Issues</span><span>Meaningful Work</span>
+          <span>Build Your Portfolio</span><span>Remote Friendly</span>
+        </div>
+        <div class="contribute-btns rev" data-delay=".24">
+          <a href="https://github.com/BalancewiseLtd" target="_blank" class="btn btn-white">View on GitHub</a>
+          <a href="apply.html" class="btn btn-ghost">Join the Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-off">
+    <div class="container">
+      <div class="cta-banner rev">
+        <div class="cta-text">
+          <h3>Ready to hire expert IT talent?</h3>
+          <p>Get in touch &mdash; we respond within 24 hours.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-white">Get a Free Quote</a>
+          <a href="staffing.html" class="btn btn-ghost">View Staffing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-logo-text">Balancewise <em>Technologies</em></span>
+          <p class="footer-about">IT staffing, software development, cloud computing, AI integration and managed IT services. Based in Newcastle, available UK-wide. Part of Balancewise Ltd.</p>
+          <div class="footer-reg">
+            <strong>Balancewise Ltd</strong><br>
+            Company No. 16164776 &nbsp;&middot;&nbsp; VAT No. GB483493947<br>
+            ICO Registered &nbsp;&middot;&nbsp; Ref: ZB973909 &nbsp;&middot;&nbsp; Trademark Registered<br>
+            27 Old Gloucester Street, London, WC1N 3AX<br>
+            Incorporated 6 January 2025 &nbsp;&middot;&nbsp; Active
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-label">Services</div>
+          <ul class="footer-links">
+            <li><a href="staffing.html">IT Staff Placement</a></li>
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="services.html">Cloud Computing</a></li>
+            <li><a href="ai.html">AI in the Workplace</a></li>
+            <li><a href="services.html">Data &amp; Analytics</a></li>
+            <li><a href="services.html">DevOps</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-label">Company</div>
+          <ul class="footer-links">
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="apply.html">Join Our Team</a></li>
+            <li><a href="index.html#contribute">Open Source</a></li>
+            <li><a href="https://github.com/BalancewiseLtd" target="_blank">GitHub</a></li>
+            <li><a href="https://shopbalancewise.com" target="_blank">Balancewise Clothing</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-label">Contact</div>
+          <ul class="footer-links">
+            <li><a href="mailto:info@balancewises.io">info@balancewises.io</a></li>
+            <li><a href="mailto:contract@balancewises.io">contract@balancewises.io</a></li>
+            <li><a href="tel:07308864152">07308 864152</a></li>
+            <li><a href="contact.html">Submit an Enquiry</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 Balancewise Ltd. Company No. 16164776. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><script src="js/home.js"></script>
+</body>
+</html>
