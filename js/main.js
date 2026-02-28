@@ -139,7 +139,10 @@ function hookForm(formId, btnId, apiUrl) {
     try {
       await fetch(apiUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify(data)
       });
     } catch (err) { /* server may not be running on static host */ }
