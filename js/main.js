@@ -26,6 +26,17 @@ document.getElementById('themeToggle')?.addEventListener('click', () => {
   setThemeIcon(next);
 });
 
+// ← ADDED THIS FOR MOBILE MENU THEME TOGGLE
+document.getElementById('themeToggleMobile')?.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('bwt-theme', next);
+  setThemeIcon(next);
+  const label = document.getElementById('themeLabel');
+  if (label) label.textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+});
+
 // ── CURSOR (desktop only) ──
 const cursor = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursorRing');
