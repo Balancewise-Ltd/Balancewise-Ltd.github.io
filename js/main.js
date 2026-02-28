@@ -155,8 +155,8 @@ function hookForm(formId, btnId, apiUrl) {
   });
 }
 
-hookForm('contactForm', 'contactBtn', 'https://formspree.io/f/XXXXXXXX');
-hookForm('applyForm',   'applyBtn',   'https://formspree.io/f/YYYYYYYY');
+hookForm('contactForm', 'contactBtn', 'https://formspree.io/f/xkoveoyr');
+hookForm('applyForm',   'applyBtn',   'https://formspree.io/f/xkoveoyr');
 
 // Input validation visual feedback
 document.querySelectorAll('input[required], textarea[required]').forEach(el => {
