@@ -1510,22 +1510,16 @@
             requestAnimationFrame(tick);
         }
         async function startStripeCheckout(plan) {
-            try {
-                const res = await fetch(API + '/api/billing/create-checkout-session', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    credentials: 'include',
-                    body: JSON.stringify({ plan })
-                });
-                const data = await res.json();
-                if (data.url) {
-                    window.location = data.url;
-                } else {
-                    alert('Could not start checkout (missing URL from server)');
-                }
-            } catch (e) {
-                alert('Could not start checkout: ' + (e.message || e));
-            }
+            let email = prompt("Enter your email for your subscription:");
+            if (!email) return alert("Email is required for checkout.");
+            const res = await fetch(API + '/api/billing/checkout/' + plan, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            });
+            const data = await res.json();
+            if (data.checkout_url) window.location = data.checkout_url;
+            else alert('Could not start checkout (missing URL from server)');
         }
     </script>
 </body>
