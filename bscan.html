@@ -1509,6 +1509,24 @@
             }
             requestAnimationFrame(tick);
         }
+        async function startStripeCheckout(plan) {
+            try {
+                const res = await fetch(API + '/api/billing/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({ plan })
+                });
+                const data = await res.json();
+                if (data.url) {
+                    window.location = data.url;
+                } else {
+                    alert('Could not start checkout (missing URL from server)');
+                }
+            } catch (e) {
+                alert('Could not start checkout: ' + (e.message || e));
+            }
+        }
     </script>
 </body>
 </html>
