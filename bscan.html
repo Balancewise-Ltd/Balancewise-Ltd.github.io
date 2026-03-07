@@ -779,7 +779,8 @@
         footer {
             max-width: 920px;
             margin: 0 auto;
-            padding: 24px 40px;
+            padding: 40px 40px;
+            margin-top: 40px;
             border-top: 1px solid var(--border);
             display: flex;
             align-items: center;
@@ -811,15 +812,49 @@
         /* ── Responsive ───────────────────────────────────────── */
         @media (max-width: 640px) {
             nav { padding: 12px 16px; }
-            .hero { padding: 110px 16px 40px; }
-            .audit-input-row { flex-direction: column; }
-            .audit-btn { justify-content: center; }
-            .overall-row { flex-direction: column; text-align: center; }
-            .scores-grid { grid-template-columns: repeat(2, 1fr); }
-            .results, footer { padding-left: 16px; padding-right: 16px; }
-            .cta-banner { flex-direction: column; text-align: center; }
-            .cta-banner-btns { justify-content: center; }
             .nav-links .nav-link { display: none; }
+            .hero { padding: 100px 16px 32px; }
+            h1 { font-size: 28px; letter-spacing: -1px; }
+            .hero-sub { font-size: 14px; margin-bottom: 24px; }
+            .audit-box { max-width: 100%; }
+            .audit-input-row { flex-direction: column; }
+            .audit-input { font-size: 14px; padding: 12px 14px; }
+            .audit-btn { justify-content: center; width: 100%; padding: 14px; }
+            .quick-urls { gap: 6px; }
+            .quick-url { font-size: 10px; padding: 3px 8px; }
+            .gate-fields { grid-template-columns: 1fr; }
+            .gate-card { padding: 18px; }
+            .terminal { font-size: 11px; max-height: 150px; padding: 12px 14px; }
+            .overall-row { flex-direction: column; text-align: center; padding: 20px; gap: 16px; }
+            .ring-wrap { width: 90px; height: 90px; }
+            .ring-svg { width: 90px; height: 90px; }
+            .ring-num { font-size: 26px; }
+            .overall-text h3 { font-size: 16px; }
+            .overall-text p { font-size: 12px; }
+            .scores-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+            .s-card { padding: 14px; }
+            .s-num { font-size: 28px; }
+            .s-label { font-size: 11px; }
+            .results { padding: 0 16px 60px; }
+            .results-bar { flex-direction: column; align-items: flex-start; }
+            .results-url { font-size: 11px; width: 100%; overflow: hidden; text-overflow: ellipsis; }
+            .issue { padding: 12px 14px; }
+            .issue-title { font-size: 12px; }
+            .issue-desc { font-size: 11px; }
+            .cta-banner { flex-direction: column; text-align: center; padding: 24px 20px; }
+            .cta-banner h3 { font-size: 17px; }
+            .cta-banner-btns { justify-content: center; width: 100%; }
+            .cta-btn { width: 100%; text-align: center; }
+            footer { padding: 32px 16px; margin-top: 24px; flex-direction: column; text-align: center; gap: 8px; }
+            .paywall-card { padding: 28px 20px; }
+            .paywall-card h2 { font-size: 20px; }
+        }
+
+        @media (max-width: 380px) {
+            h1 { font-size: 24px; }
+            .scores-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+            .s-num { font-size: 24px; }
+            .nav-cta { padding: 6px 14px; font-size: 12px; }
         }
     </style>
 </head>
@@ -963,7 +998,7 @@
         <div class="footer-right">
             <a href="https://balancewises.io/privacy">Privacy</a>
             <a href="https://balancewises.io/terms">Terms</a>
-            <a href="https://github.com/codedcek" target="_blank">GitHub</a>
+            <a href="https://github.com/Balancewise-Ltd" target="_blank">GitHub</a>
         </div>
     </footer>
 
