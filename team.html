@@ -1,181 +1,298 @@
 <!DOCTYPE html>
-<html lang="en-GB" data-theme="light">
+<html lang="en">
 <head>
-  <meta name="google-site-verification" content="ZkevVfEOof7h3LxZHfjMNfYQeWxTZ5ZlEHsB6Oh41PQ" />
-  <meta charset="UTF-8">
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Team | Balancewise Technologies</title>
-  <meta name="description" content="Meet the experienced IT professionals behind Balancewise Technologies — DevOps engineers, data analysts, cloud specialists, ML professionals and AI implementation experts available for placement.">
-  <meta name="keywords" content="IT professionals UK, DevOps engineer, data analyst, cloud specialist, machine learning professional, AI specialist">
-  <meta name="author" content="Balancewise Ltd">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://balancewises.io/team.html">
-  <meta property="og:title" content="Our Team | Balancewise Technologies">
-  <meta property="og:description" content="Experienced IT specialists available for placement, project work or freelance engagements.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://balancewises.io/team.html">
-  <meta property="og:image" content="https://balancewises.io/assets/images/og-image.jpg">
-  <meta property="og:site_name" content="Balancewise Technologies">
-  <meta property="og:locale" content="en_GB">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Team | Balancewise Technologies">
-  <meta name="twitter:description" content="Expert IT professionals available for placement across the UK.">
-  <meta name="twitter:image" content="https://balancewises.io/assets/images/og-image.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSCAN — Team Management | Balancewise Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1121;--bg1:#0f172a;--bg2:#141d33;--bg3:#1a2542;--bd:#1e2d4a;--bd2:#2a3f6b;--t1:#e2e8f0;--t2:#94a3b8;--t3:#64748b;--gold:#f5a623;--blue:#3b82f6;--green:#22c55e;--red:#ef4444;--w:#fff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh;-webkit-font-smoothing:antialiased;}
+code,.mono{font-family:'JetBrains Mono',monospace;}
+.bg-fx{position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(59,130,246,.08),transparent),radial-gradient(ellipse 40% 30% at 80% 20%,rgba(245,166,35,.04),transparent);pointer-events:none;}
+.bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(30,45,74,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(30,45,74,.3) 1px,transparent 1px);background-size:80px 80px;opacity:.12;pointer-events:none;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(11,17,33,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);}
+.logo{font-weight:700;font-size:15px;font-style:italic;color:var(--t1);text-decoration:none;} .logo b{color:var(--gold);}
+.nav-r{display:flex;align-items:center;gap:8px;}
+.nav-link{padding:6px 12px;border-radius:7px;color:var(--t2);text-decoration:none;font-size:12px;font-weight:500;transition:.2s;} .nav-link:hover{color:var(--t1);} .nav-link.active{color:var(--blue);background:rgba(59,130,246,.1);}
+.chip{display:flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;background:var(--bg2);border:1px solid var(--bd);font-size:11px;color:var(--t2);}
+.av{width:20px;height:20px;border-radius:50%;background:rgba(245,166,35,.15);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--gold);}
+
+.wrap{max-width:780px;margin:0 auto;padding:90px 24px 60px;position:relative;}
+.page-head{margin-bottom:28px;}
+.page-head .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.12);font-size:10px;font-weight:700;color:var(--blue);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;}
+.page-head h1{font-size:clamp(24px,4vw,34px);font-weight:800;font-style:italic;letter-spacing:-1px;margin-bottom:6px;} .page-head h1 b{color:var(--gold);}
+.page-head p{font-size:14px;color:var(--t2);line-height:1.6;}
+
+.bn{display:none;padding:14px 18px;border-radius:10px;margin-bottom:16px;font-size:13px;align-items:center;gap:10px;animation:fu .3s;}
+.bn.on{display:flex;}
+.bn.ok{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15);color:var(--green);}
+.bn.er{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.15);color:var(--red);}
+.bn .cl{margin-left:auto;background:none;border:none;color:inherit;cursor:pointer;font-size:14px;opacity:.6;} .bn .cl:hover{opacity:1;}
+
+.card{background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:24px;margin-bottom:16px;transition:.2s;}
+.card:hover{border-color:var(--bd2);}
+.card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.card-title{font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.card-count{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--t3);padding:3px 10px;border-radius:100px;background:var(--bg1);border:1px solid var(--bd);}
+
+.invite-row{display:flex;gap:10px;align-items:flex-end;}
+.field{flex:1;}
+.field label{display:block;font-size:10px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;font-family:'JetBrains Mono',monospace;}
+.field input,.field select{width:100%;background:var(--bg1);border:1px solid var(--bd);border-radius:8px;padding:11px 14px;font-size:13px;font-family:inherit;color:var(--t1);outline:none;transition:.2s;}
+.field input:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,130,246,.12);}
+.field input::placeholder{color:var(--t3);}
+
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:.2s;border:none;text-decoration:none;}
+.btn-p{background:var(--blue);color:var(--w);} .btn-p:hover{background:#2563eb;box-shadow:0 4px 16px rgba(59,130,246,.2);}
+.btn-g{background:var(--gold);color:var(--bg);} .btn-g:hover{box-shadow:0 4px 16px rgba(245,166,35,.2);}
+.btn-o{background:none;border:1px solid var(--bd);color:var(--t2);} .btn-o:hover{border-color:var(--blue);color:var(--blue);}
+.btn-d{background:none;border:1px solid var(--bd);color:var(--t3);font-size:11px;padding:7px 14px;} .btn-d:hover{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.06);}
+.btn:disabled{opacity:.4;cursor:not-allowed;}
+
+/* Team member rows */
+.member{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--bg2);border:1px solid var(--bd);border-radius:12px;margin-bottom:8px;transition:.15s;}
+.member:hover{border-color:var(--bd2);}
+.member-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0;}
+.member-av.blue{background:rgba(59,130,246,.12);color:var(--blue);}
+.member-av.gold{background:rgba(245,166,35,.12);color:var(--gold);}
+.member-av.green{background:rgba(34,197,94,.12);color:var(--green);}
+.member-info{flex:1;}
+.member-email{font-size:13px;font-weight:600;font-family:'JetBrains Mono',monospace;margin-bottom:2px;}
+.member-meta{font-size:11px;color:var(--t3);display:flex;align-items:center;gap:8px;}
+.status{font-size:10px;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:100px;font-weight:600;}
+.status.accepted{background:rgba(34,197,94,.12);color:var(--green);}
+.status.pending{background:rgba(245,166,35,.12);color:var(--gold);}
+.status.removed{background:rgba(239,68,68,.08);color:var(--t3);}
+
+/* Upgrade gate */
+.gate{text-align:center;padding:60px 32px;background:var(--bg2);border:1px solid var(--bd);border-radius:16px;}
+.gate-icon{font-size:48px;margin-bottom:16px;opacity:.6;}
+.gate h2{font-size:22px;font-weight:800;font-style:italic;margin-bottom:8px;} .gate h2 b{color:var(--gold);}
+.gate p{font-size:14px;color:var(--t2);margin-bottom:24px;line-height:1.6;max-width:400px;margin-left:auto;margin-right:auto;}
+.gate-features{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:28px;}
+.gate-feat{font-size:12px;color:var(--t2);background:var(--bg1);border:1px solid var(--bd);border-radius:8px;padding:8px 14px;display:flex;align-items:center;gap:6px;}
+.gate-feat .check{color:var(--green);}
+
+.empty{text-align:center;padding:48px 20px;} .empty-icon{font-size:36px;opacity:.3;margin-bottom:10px;} .empty h3{font-size:15px;font-weight:700;margin-bottom:4px;} .empty p{font-size:12px;color:var(--t3);}
+
+footer{max-width:780px;margin:0 auto;padding:32px 24px;border-top:1px solid var(--bd);font-size:11px;color:var(--t3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;} footer a{color:var(--gold);text-decoration:none;}
+
+@keyframes fu{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:640px){nav{padding:10px 16px;}.wrap{padding:80px 16px 40px;}.invite-row{flex-direction:column;}.member{flex-wrap:wrap;}footer{flex-direction:column;text-align:center;}}
+</style>
 </head>
 <body>
-  <div id="cursor"></div>
-  <div id="cursorRing"></div>
-  <div class="toast" id="toast"></div>
+<div class="bg-fx"></div>
+<div class="bg-grid"></div>
 
-  <nav class="navbar" id="navbar">
-    <a href="index.html" class="nav-brand">Balancewise <em>Technologies</em></a>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="staffing.html">Staffing</a></li>
-      <li><a href="ai.html">AI Solutions</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="apply.html">Join Us</a></li>
-      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
-      <li class="nav-theme-item">
-        <button class="theme-toggle-menu" id="themeToggleMobile" aria-label="Toggle dark mode">
-          <span id="themeLabel">🌙 Dark Mode</span>
-        </button>
-      </li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark / light mode">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zm9-9h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zM5 12a1 1 0 0 1-1 1H2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1zm11.95-5.54 1.41-1.41a1 1 0 0 1 1.42 1.41L18.36 7.88a1 1 0 0 1-1.41-1.42zm-12.68 10.6L2.86 18.47a1 1 0 0 1 1.41-1.41l1.41 1.41a1 1 0 0 1-1.41 1.41zM18.36 16.12l1.41 1.41a1 1 0 0 1-1.41 1.41l-1.41-1.41a1 1 0 0 1 1.41-1.41zM4.22 7.05 5.64 8.46A1 1 0 0 1 4.22 9.88L2.81 8.46a1 1 0 0 1 1.41-1.41z"/></svg>
-      </button>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<nav>
+<a href="https://balancewises.io/bscan.html" class="logo">Balancewise <b>Technologies</b></a>
+<div class="nav-r">
+<a href="https://balancewises.io/bscan.html" class="nav-link">Scanner</a>
+<a href="https://balancewises.io/account.html" class="nav-link">Dashboard</a>
+<a href="https://balancewises.io/team.html" class="nav-link active">Team</a>
+<a href="https://balancewises.io/api.html" class="nav-link">API</a>
+<div class="chip" id="np" style="display:none"><div class="av" id="na">?</div><span id="ne" class="mono" style="font-size:10px"></span></div>
+</div>
+</nav>
 
+<div class="wrap">
+<!-- Not logged in -->
+<div id="auth-gate" style="display:none;">
+<div class="gate">
+<div class="gate-icon">&#128274;</div>
+<h2>Sign in to manage your <b>team</b></h2>
+<p>You need to be logged in to access team management.</p>
+<a class="btn btn-g" href="https://balancewises.io/account.html">Sign In</a>
+</div>
+</div>
 
-  <section class="page-hero">
-    <div class="page-hero-lines"></div>
-    <div class="page-hero-glow"></div>
-    <div class="page-hero-inner">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Our Team</div>
-      <h1 class="rev">Experienced Specialists,<br><em>Ready to Deploy</em></h1>
-      <p class="rev" data-delay=".06">Our team consists of experienced professionals across multiple IT disciplines &mdash; available for placement with your business or to deliver your project directly.</p>
-      <div class="page-hero-btns rev" data-delay=".12">
-        <a href="contact.html" class="btn btn-white">Hire Our Team</a>
-        <a href="apply.html" class="btn btn-ghost">Join Us</a>
-      </div>
-    </div>
-  </section>
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>IT Staffing</span><span class="ticker-sep">&#9670;</span>
-      <span>Software Development</span><span class="ticker-sep">&#9670;</span>
-      <span>Cloud Computing</span><span class="ticker-sep">&#9670;</span>
-      <span>AI in the Workplace</span><span class="ticker-sep">&#9670;</span>
-      <span>DevOps Engineering</span><span class="ticker-sep">&#9670;</span>
-      <span>Data Analytics</span><span class="ticker-sep">&#9670;</span>
-      <span>Machine Learning</span><span class="ticker-sep">&#9670;</span>
-      <span>Temporary Contracts</span><span class="ticker-sep">&#9670;</span>
-      <span>Permanent Placements</span><span class="ticker-sep">&#9670;</span>
-      <span>Open Source</span><span class="ticker-sep">&#9670;</span>
-      <span>IT Staffing</span><span class="ticker-sep">&#9670;</span>
-      <span>Software Development</span><span class="ticker-sep">&#9670;</span>
-      <span>Cloud Computing</span><span class="ticker-sep">&#9670;</span>
-      <span>AI in the Workplace</span><span class="ticker-sep">&#9670;</span>
-      <span>DevOps Engineering</span><span class="ticker-sep">&#9670;</span>
-      <span>Data Analytics</span><span class="ticker-sep">&#9670;</span>
-    </div>
-  </div>
-  <section class="bg-white">
-    <div class="container">
-      <div class="section-header center">
-        <span class="eyebrow rev">Core Team</span>
-        <h2 class="section-title rev" data-delay=".06">Professionals Behind<br><em>Balancewise Technologies</em></h2>
-        <p class="section-desc rev" data-delay=".12">Experienced specialists across key IT disciplines &mdash; all available for placement, project work or freelance engagements.</p>
-      </div>
-      <div class="team-grid">
-        <div class="team-card rev" data-delay="0"><div class="team-card-glow"></div><div class="tc-avatar">&#128295;</div><div class="tc-role">DevOps Engineer</div><div class="tc-spec">Infrastructure &amp; Automation</div><p class="tc-bio">Specialises in CI/CD pipeline design, containerisation and cloud infrastructure automation for fast-moving engineering teams.</p><div class="tc-tags"><span>Docker</span><span>CI/CD</span><span>Linux</span><span>Azure</span><span>Terraform</span></div></div>
-        <div class="team-card rev" data-delay=".08"><div class="team-card-glow"></div><div class="tc-avatar">&#128202;</div><div class="tc-role">Data Analyst</div><div class="tc-spec">Data &amp; Business Intelligence</div><p class="tc-bio">Expert in data pipelines, business intelligence dashboards and translating complex data into actionable business decisions.</p><div class="tc-tags"><span>Python</span><span>SQL</span><span>Power BI</span><span>Excel</span><span>Tableau</span></div></div>
-        <div class="team-card rev" data-delay=".16"><div class="team-card-glow"></div><div class="tc-avatar">&#9729;&#65039;</div><div class="tc-role">Cloud Specialist</div><div class="tc-spec">Azure &amp; Cloud Architecture</div><p class="tc-bio">Designs and manages cloud environments on Microsoft Azure with a focus on security, compliance and cost efficiency.</p><div class="tc-tags"><span>Azure</span><span>Entra ID</span><span>IaC</span><span>Security</span><span>AWS</span></div></div>
-        <div class="team-card rev" data-delay=".24"><div class="team-card-glow"></div><div class="tc-avatar">&#129302;</div><div class="tc-role">ML Professional</div><div class="tc-spec">Machine Learning &amp; AI</div><p class="tc-bio">Builds and deploys machine learning models across NLP, computer vision and predictive analytics use cases.</p><div class="tc-tags"><span>Python</span><span>TensorFlow</span><span>PyTorch</span><span>NLP</span><span>Scikit</span></div></div>
-        <div class="team-card rev" data-delay=".32"><div class="team-card-glow"></div><div class="tc-avatar">&#129504;</div><div class="tc-role">AI Implementation</div><div class="tc-spec">AI Agents &amp; Workplace AI</div><p class="tc-bio">Deploys Claude AI locally, builds custom agents and integrates AI tools directly into existing business workflows and systems.</p><div class="tc-tags"><span>Claude AI</span><span>AI Agents</span><span>MCP</span><span>Automation</span></div></div>
-        <div class="team-card rev" data-delay=".4"><div class="team-card-glow"></div><div class="tc-avatar">&#128187;</div><div class="tc-role">Backend Developer</div><div class="tc-spec">REST APIs &amp; Databases</div><p class="tc-bio">Builds secure REST APIs, manages database design and develops server-side applications to specification.</p><div class="tc-tags"><span>PHP</span><span>Node.js</span><span>MySQL</span><span>REST API</span><span>PDO</span></div></div>
-      </div>
-      <div class="team-network rev">
-        <div class="tn-plus">+</div>
-        <div>
-          <strong>Need a specialist not listed above?</strong>
-          <p>Through our professional network we can source web developers, cybersecurity analysts, database administrators, QA engineers, IT project managers, frontend developers and more &mdash; for any engagement type.</p>
-          <a href="contact.html">Tell us what you need &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-off"><div class="container"><div class="cta-banner rev"><div class="cta-text"><h3>Want to join our team?</h3><p>We are always looking for talented IT professionals to join our network.</p></div><div class="cta-btns"><a href="apply.html" class="btn btn-white">Apply Now</a><a href="contact.html" class="btn btn-ghost">Contact Us</a></div></div></div></section>
+<!-- Not Agency -->
+<div id="upgrade-gate" style="display:none;">
+<div class="gate">
+<div class="gate-icon">&#128101;</div>
+<h2>Team Management requires <b>Agency</b></h2>
+<p>Upgrade to the Agency plan to invite up to 5 team members who all share your plan benefits.</p>
+<div class="gate-features">
+<div class="gate-feat"><span class="check">&#10003;</span> Up to 5 team members</div>
+<div class="gate-feat"><span class="check">&#10003;</span> Shared unlimited scans</div>
+<div class="gate-feat"><span class="check">&#10003;</span> White-label PDF reports</div>
+<div class="gate-feat"><span class="check">&#10003;</span> Team dashboard</div>
+</div>
+<a class="btn btn-g" href="https://balancewises.io/bscan.html#pricing">Upgrade to Agency &rarr;</a>
+</div>
+</div>
 
+<!-- Team Dashboard -->
+<div id="team-dash" style="display:none;">
+<div class="page-head">
+<div class="badge">&#128101; Agency Team</div>
+<h1>Team <b>Management</b></h1>
+<p>Invite team members to share your Agency plan. Each member gets unlimited scans, PDF exports, and full scan history.</p>
+</div>
 
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <span class="footer-logo-text">Balancewise <em>Technologies</em></span>
-          <p class="footer-about">IT staffing, software development, cloud computing, AI integration and managed IT services. Based in Newcastle, available UK-wide. Part of Balancewise Ltd.</p>
-          <div class="footer-reg">
-            <strong>Balancewise Ltd</strong><br>
-            Company No. 16164776 &nbsp;&middot;&nbsp; VAT No. GB483493947<br>
-            ICO Registered &nbsp;&middot;&nbsp; Ref: ZB973909 &nbsp;&middot;&nbsp; Trademark Registered<br>
-            27 Old Gloucester Street, London, WC1N 3AX<br>
-            Incorporated 6 January 2025 &nbsp;&middot;&nbsp; Active
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-label">Services</div>
-          <ul class="footer-links">
-            <li><a href="staffing.html">IT Staff Placement</a></li>
-            <li><a href="services.html">Web Development</a></li>
-            <li><a href="services.html">Cloud Computing</a></li>
-            <li><a href="ai.html">AI in the Workplace</a></li>
-            <li><a href="services.html">Data &amp; Analytics</a></li>
-            <li><a href="services.html">DevOps</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-col-label">Company</div>
-          <ul class="footer-links">
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="apply.html">Join Our Team</a></li>
-            <li><a href="index.html#contribute">Open Source</a></li>
-            <li><a href="https://github.com/Balancewise-Ltd" target="_blank">GitHub</a></li>
-            <li><a href="https://shopbalancewise.com" target="_blank">Balancewise Clothing</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-col-label">Contact</div>
-          <ul class="footer-links">
-            <li><a href="mailto:info@balancewises.io">info@balancewises.io</a></li>
-            <li><a href="mailto:contract@balancewises.io">contract@balancewises.io</a></li>
-            <li><a href="tel:07308864152">07308 864152</a></li>
-            <li><a href="contact.html">Submit an Enquiry</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">&copy; 2026 Balancewise Ltd. Company No. 16164776. All rights reserved.</div>
-        <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-          <a href="cookies.html">Cookie Policy</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+<div class="bn ok" id="t-ok"><span>&#10003;</span><span id="t-ok-msg"></span><button class="cl" onclick="this.parentElement.classList.remove('on')">&#10005;</button></div>
+<div class="bn er" id="t-er"><span>&#10007;</span><span id="t-er-msg"></span><button class="cl" onclick="this.parentElement.classList.remove('on')">&#10005;</button></div>
 
-  <script src="js/main.js"></script>
-  <script src="js/cookies.js"></script>
-  
+<!-- Invite Card -->
+<div class="card">
+<div class="card-head">
+<div class="card-title">&#9993; Invite a Team Member</div>
+<div class="card-count" id="team-count">0 / 5 seats</div>
+</div>
+<div class="invite-row">
+<div class="field" style="flex:2;">
+<label>Email Address</label>
+<input type="email" id="inv-email" placeholder="colleague@company.com" autocomplete="email">
+</div>
+<div class="field" style="flex:0 0 140px;">
+<label>Role</label>
+<select id="inv-role">
+<option value="member">Member</option>
+<option value="admin">Admin</option>
+</select>
+</div>
+<button class="btn btn-p" id="inv-btn" onclick="invite()">Send Invite</button>
+</div>
+</div>
+
+<!-- Team List -->
+<div class="card">
+<div class="card-head">
+<div class="card-title">&#128101; Your Team</div>
+</div>
+<div id="team-list"></div>
+</div>
+
+<!-- Roles Info -->
+<div class="card" style="background:var(--bg1);">
+<div class="card-title" style="margin-bottom:12px;">&#128214; How Team Works</div>
+<div style="font-size:13px;color:var(--t2);line-height:1.8;">
+<strong style="color:var(--t1);">Members</strong> get full Agency benefits: unlimited scans, PDF export, and scan history under their own account.<br>
+<strong style="color:var(--t1);">Admins</strong> can also invite and remove other team members.<br>
+<strong style="color:var(--t1);">Invitations</strong> expire after 7 days. Removing a member downgrades them to the Free plan.<br>
+<strong style="color:var(--t1);">Limit:</strong> Up to <span class="mono" style="color:var(--gold);">5</span> team members per Agency account.
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<span>BSCAN by <a href="https://balancewises.io">Balancewise Technologies</a> &middot; &copy; 2026</span>
+<span><a href="https://balancewises.io/privacy" style="color:var(--t3)">Privacy</a> &middot; <a href="https://balancewises.io/terms" style="color:var(--t3)">Terms</a></span>
+</footer>
+
+<script>
+const A='https://api-bscan.balancewises.io';
+let T=localStorage.getItem('bscan_token')||'',U=null;
+
+async function init(){
+    // Check invite acceptance
+    const p=new URLSearchParams(location.search);
+    const inv=p.get('invite');
+
+    if(!T){document.getElementById('auth-gate').style.display='block';return;}
+    try{
+        const r=await fetch(A+'/api/auth/me',{headers:{Authorization:'Bearer '+T}});
+        if(!r.ok)throw new Error();
+        U=await r.json();
+        document.getElementById('np').style.display='flex';
+        document.getElementById('ne').textContent=U.email;
+        document.getElementById('na').textContent=(U.name||U.email)[0].toUpperCase();
+
+        // Accept invite if token present
+        if(inv){await acceptInvite(inv);const r2=await fetch(A+'/api/auth/me',{headers:{Authorization:'Bearer '+T}});if(r2.ok)U=await r2.json();}
+
+        if(U.plan!=='agency'){document.getElementById('upgrade-gate').style.display='block';return;}
+        document.getElementById('team-dash').style.display='block';
+        loadTeam();
+    }catch(e){localStorage.removeItem('bscan_token');document.getElementById('auth-gate').style.display='block';}
+}
+
+async function loadTeam(){
+    try{
+        const r=await fetch(A+'/api/team',{headers:{Authorization:'Bearer '+T}});
+        const d=await r.json();
+        const tm=d.team||[];
+        document.getElementById('team-count').textContent=tm.length+' / '+(d.max_members||5)+' seats';
+        const list=document.getElementById('team-list');
+
+        if(!tm.length){
+            list.innerHTML='<div class="empty"><div class="empty-icon">&#128101;</div><h3>No team members yet</h3><p>Invite your first colleague to get started.</p></div>';
+            return;
+        }
+
+        const colors=['blue','gold','green'];
+        list.innerHTML=tm.map((m,i)=>{
+            const init=(m.name||m.email)[0].toUpperCase();
+            const col=colors[i%colors.length];
+            const name=m.name?'<strong>'+m.name+'</strong> &middot; ':'';
+            const role=m.role==='admin'?'<span style="color:var(--gold);">Admin</span>':'Member';
+            const joined=m.joined_at?'Joined '+new Date(m.joined_at).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}):'Invited '+new Date(m.invited_at).toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+            return '<div class="member"><div class="member-av '+col+'">'+init+'</div><div class="member-info"><div class="member-email">'+m.email+'</div><div class="member-meta">'+name+role+' &middot; '+joined+'</div></div><span class="status '+m.status+'">'+m.status+'</span>'+(m.status!=='removed'?'<button class="btn-d" onclick="removeMember(\''+m.id+'\')">Remove</button>':'')+'</div>';
+        }).join('');
+    }catch(e){
+        document.getElementById('team-list').innerHTML='<div class="empty"><h3>Could not load team</h3><p>Please refresh the page.</p></div>';
+    }
+}
+
+async function invite(){
+    const email=document.getElementById('inv-email').value.trim();
+    const role=document.getElementById('inv-role').value;
+    const btn=document.getElementById('inv-btn');
+    if(!email||!email.includes('@')){document.getElementById('inv-email').focus();return;}
+
+    btn.disabled=true;btn.textContent='Sending...';
+    document.getElementById('t-er').classList.remove('on');
+    document.getElementById('t-ok').classList.remove('on');
+
+    try{
+        const r=await fetch(A+'/api/team/invite',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+T},body:JSON.stringify({email,role})});
+        const d=await r.json();
+        if(!r.ok)throw new Error(d.detail||'Invite failed');
+        document.getElementById('t-ok-msg').textContent=d.message||'Invitation sent to '+email;
+        document.getElementById('t-ok').classList.add('on');
+        document.getElementById('inv-email').value='';
+        loadTeam();
+    }catch(e){
+        document.getElementById('t-er-msg').textContent=e.message;
+        document.getElementById('t-er').classList.add('on');
+    }
+    btn.disabled=false;btn.textContent='Send Invite';
+}
+
+document.getElementById('inv-email').addEventListener('keydown',e=>{if(e.key==='Enter')invite();});
+
+async function removeMember(id){
+    if(!confirm('Remove this team member? They will be downgraded to the Free plan.'))return;
+    try{
+        await fetch(A+'/api/team/members/'+id,{method:'DELETE',headers:{Authorization:'Bearer '+T}});
+        document.getElementById('t-ok-msg').textContent='Team member removed.';
+        document.getElementById('t-ok').classList.add('on');
+        loadTeam();
+    }catch(e){}
+}
+
+async function acceptInvite(token2){
+    try{
+        const r=await fetch(A+'/api/team/accept',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+T},body:JSON.stringify({token:token2})});
+        const d=await r.json();
+        if(r.ok){
+            document.getElementById('t-ok-msg').textContent=d.message||'You have joined the team!';
+            document.getElementById('t-ok').classList.add('on');
+            history.replaceState({},'',location.pathname);
+        }else{
+            document.getElementById('t-er-msg').textContent=d.detail||'Could not accept invitation.';
+            document.getElementById('t-er').classList.add('on');
+        }
+    }catch(e){}
+}
+
+init();
+</script>
 </body>
 </html>
