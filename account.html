@@ -1002,6 +1002,10 @@
 
         // ── Init ─────────────────────────────────────────────
         async function init() {
+            // Check for Stripe success redirect FIRST (before auth)
+            const params = new URLSearchParams(window.location.search);
+            const sessionId = params.get('session_id');
+
             if (token) {
                 try {
                     const res = await fetch(API + '/api/auth/me', {
@@ -1010,15 +1014,38 @@
                     if (res.ok) {
                         currentUser = await res.json();
                         showDashboard();
-                        checkSuccessRedirect();
+                        if (sessionId) {
+                            checkSuccessRedirect();
+                        }
                         loadHistory();
                         return;
                     }
                 } catch (e) {}
-                // Token invalid
                 localStorage.removeItem('bscan_token');
                 token = '';
             }
+
+            // Guest just paid — show success + register prompt
+            if (sessionId) {
+                showAuth();
+                document.getElementById('success-banner').classList.add('active');
+                // Pre-fill email if we have it from localStorage
+                const savedEmail = localStorage.getItem('bscan_email') || '';
+                if (savedEmail) {
+                    document.getElementById('auth-email').value = savedEmail;
+                }
+                // Switch to register mode
+                isRegisterMode = true;
+                document.getElementById('name-field').style.display = 'block';
+                document.getElementById('auth-submit').textContent = 'Create Account';
+                document.getElementById('auth-toggle-text').textContent = 'Already have an account?';
+                document.getElementById('auth-toggle-link').textContent = 'Sign in';
+                // Update success banner text for guests
+                document.getElementById('success-msg').textContent = 'Create your account below to access your Pro dashboard, scan history, and unlimited audits.';
+                window.history.replaceState({}, '', window.location.pathname);
+                return;
+            }
+
             showAuth();
         }
 
