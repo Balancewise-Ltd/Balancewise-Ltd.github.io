@@ -1128,6 +1128,78 @@
             </div>
         </div>
     </div>
+    <!-- Add this to your Pricing section -->
+    <div class="pricing-section" id="choose-plan-box">
+        <h2 class="pricing-title">Choose Your Plan</h2>
+        <form id="choose-plan-form" style="max-width:420px;margin:0 auto;text-align:left;" onsubmit="return handlePlanFormSubmit(event)">
+            <label style="font-weight:600;">Email for checkout:</label><br>
+            <input type="email" id="checkout-email" required placeholder="you@email.com"
+                style="width:100%;padding:10px;margin:8px 0 16px 0;border-radius:8px;border:1px solid #2a3f6b;font-size:1rem;">
+
+            <label style="font-weight:600;">Select plan:</label><br>
+            <select id="plan-select" onchange="handlePricingPlanChange()" style="width:100%;padding:10px;margin:8px 0 14px 0;border-radius:8px;font-size:1rem;">
+                <option value="pro">Pro</option>
+                <option value="agency">Agency</option>
+                <option value="api-usage">API Usage</option>
+            </select>
+            <div id="interval-row">
+                <label style="font-weight:600;">Billing interval:</label><br>
+                <select id="interval-select" style="width:100%;padding:10px;margin:8px 0 18px 0;border-radius:8px;font-size:1rem;">
+                    <option value="monthly">Monthly</option>
+                    <option value="annual">Annual</option>
+                </select>
+            </div>
+            <button id="go-checkout-btn" type="submit" class="plan-btn" style="width:100%;margin-top:12px;">
+                Start Subscription
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const API = 'https://api-bscan.balancewises.io';
+
+        // Hide interval row if plan is "api-usage"
+        function handlePricingPlanChange() {
+            const plan = document.getElementById("plan-select").value;
+            document.getElementById("interval-row").style.display =
+                (plan === "pro" || plan === "agency") ? "" : "none";
+        }
+        handlePricingPlanChange();
+
+        async function handlePlanFormSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById("checkout-email").value.trim();
+            const plan = document.getElementById("plan-select").value;
+            const interval = document.getElementById("interval-select").value;
+
+            const btn = document.getElementById("go-checkout-btn");
+            btn.disabled = true;
+            btn.textContent = "One moment...";
+
+            // Only send interval for pro/agency plans
+            let body = { email };
+            if (plan === "pro" || plan === "agency")
+                body.interval = interval;
+
+            try {
+                const resp = await fetch(API + "/api/billing/checkout/" + plan, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(body)
+                });
+                const data = await resp.json();
+                if (data.checkout_url)
+                    window.location = data.checkout_url;
+                else
+                    alert(data.detail || "Checkout error — please try again.");
+            } catch (e) {
+                alert("Network or server error. Please try again later.");
+            }
+            btn.disabled = false;
+            btn.textContent = "Start Subscription";
+            return false;
+        }
+    </script>
 
     <!-- Results -->
     <section class="results" id="results">
