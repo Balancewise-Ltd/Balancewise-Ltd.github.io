@@ -985,7 +985,7 @@
                 <input type="email" id="auth-email" placeholder="you@company.com" autocomplete="email">
             </div>
             <div class="auth-field">
-                <label for="auth-password">Password</label>
+                <label for="auth-password" style="display:flex;justify-content:space-between;align-items:center;">Password <a onclick="showForgotPassword()" style="color:var(--accent-blue);font-size:11px;text-transform:none;letter-spacing:0;font-weight:600;cursor:pointer;">Forgot password?</a></label>
                 <input type="password" id="auth-password" placeholder="Min 8 characters" autocomplete="current-password">
             </div>
 
@@ -1210,12 +1210,142 @@
             btn.disabled = false;
             btn.textContent = 'Update Password';
         }
+        // ── Forgot Password ─────────────────────────────────
+        function showForgotPassword() {
+            const card = document.querySelector('.auth-card');
+            card.innerHTML = `
+                <h2>Reset your <span class="gold">password</span></h2>
+                <p class="auth-sub">Enter your email and we'll send you a reset link.</p>
+                <div class="auth-field">
+                    <label for="reset-email">Email address</label>
+                    <input type="email" id="reset-email" placeholder="you@company.com" autocomplete="email">
+                </div>
+                <div class="auth-error" id="reset-error"></div>
+                <div class="modal-success" id="reset-success"></div>
+                <button class="auth-submit" id="reset-submit" onclick="sendResetEmail()">Send Reset Link</button>
+                <div class="auth-toggle" style="margin-top:16px;">
+                    <a onclick="location.reload()" style="color:var(--accent-blue);cursor:pointer;">← Back to sign in</a>
+                </div>
+            `;
+            const savedEmail = localStorage.getItem('bscan_email') || '';
+            if (savedEmail) document.getElementById('reset-email').value = savedEmail;
+        }
+
+        async function sendResetEmail() {
+            const email = document.getElementById('reset-email').value.trim();
+            const errorEl = document.getElementById('reset-error');
+            const successEl = document.getElementById('reset-success');
+            const btn = document.getElementById('reset-submit');
+
+            errorEl.classList.remove('active');
+            successEl.classList.remove('active');
+
+            if (!email) {
+                errorEl.textContent = 'Please enter your email.';
+                errorEl.classList.add('active');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            try {
+                const res = await fetch(API + '/api/auth/forgot-password', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email }),
+                });
+                const data = await res.json();
+                successEl.textContent = data.message || 'If that email exists, a reset link has been sent.';
+                successEl.classList.add('active');
+            } catch (e) {
+                errorEl.textContent = 'Network error. Please try again.';
+                errorEl.classList.add('active');
+            }
+
+            btn.disabled = false;
+            btn.textContent = 'Send Reset Link';
+        }
+
+        // ── Handle reset token in URL ───────────────────────
+        function checkResetToken() {
+            const params = new URLSearchParams(window.location.search);
+            const resetToken = params.get('reset_token');
+            if (!resetToken) return false;
+
+            window.history.replaceState({}, '', window.location.pathname);
+
+            const card = document.querySelector('.auth-card');
+            card.innerHTML = `
+                <h2>Set new <span class="gold">password</span></h2>
+                <p class="auth-sub">Choose a new password for your BSCAN account.</p>
+                <div class="auth-field">
+                    <label>New Password</label>
+                    <input type="password" id="new-pw" placeholder="Minimum 8 characters">
+                </div>
+                <div class="auth-field">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirm-pw" placeholder="Re-enter new password">
+                </div>
+                <div class="auth-error" id="reset-error"></div>
+                <div class="modal-success" id="reset-success"></div>
+                <button class="auth-submit" onclick="submitNewPassword('${resetToken}')">Reset Password</button>
+            `;
+            return true;
+        }
+
+        async function submitNewPassword(resetToken) {
+            const newPw = document.getElementById('new-pw').value;
+            const confirmPw = document.getElementById('confirm-pw').value;
+            const errorEl = document.getElementById('reset-error');
+            const successEl = document.getElementById('reset-success');
+
+            errorEl.classList.remove('active');
+            successEl.classList.remove('active');
+
+            if (!newPw || !confirmPw) {
+                errorEl.textContent = 'Please fill in both fields.';
+                errorEl.classList.add('active');
+                return;
+            }
+            if (newPw.length < 8) {
+                errorEl.textContent = 'Password must be at least 8 characters.';
+                errorEl.classList.add('active');
+                return;
+            }
+            if (newPw !== confirmPw) {
+                errorEl.textContent = 'Passwords do not match.';
+                errorEl.classList.add('active');
+                return;
+            }
+
+            try {
+                const res = await fetch(API + '/api/auth/reset-password', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ token: resetToken, new_password: newPw }),
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.detail || 'Reset failed');
+                successEl.textContent = 'Password reset! Redirecting to sign in...';
+                successEl.classList.add('active');
+                setTimeout(() => location.reload(), 2000);
+            } catch (e) {
+                errorEl.textContent = e.message;
+                errorEl.classList.add('active');
+            }
+        }
 
         // ── Init ─────────────────────────────────────────────
         async function init() {
             // Check for Stripe success redirect FIRST (before auth)
             const params = new URLSearchParams(window.location.search);
             const sessionId = params.get('session_id');
+            // Check for password reset token
+            if (checkResetToken()) {
+                showAuth();
+                return;
+            }
 
             if (token) {
                 try {
