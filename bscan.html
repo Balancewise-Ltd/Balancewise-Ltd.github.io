@@ -790,6 +790,203 @@
             color: var(--success);
         }
 
+        /* ── Checkout Modal ───────────────────────────────────── */
+        .checkout-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.75);
+            backdrop-filter: blur(10px);
+            z-index: 250;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkout-overlay.active { display: flex; }
+
+        .checkout-modal {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 36px 32px;
+            max-width: 420px;
+            width: 90%;
+            animation: fadeUp 0.25s ease-out;
+            position: relative;
+        }
+
+        .checkout-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 6px;
+            transition: all 0.2s;
+            line-height: 1;
+            font-size: 18px;
+        }
+
+        .checkout-close:hover { color: var(--text-primary); background: var(--bg-elevated); }
+
+        .checkout-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--accent-gold-dim);
+            border: 1px solid rgba(245, 166, 35, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            font-size: 22px;
+        }
+
+        .checkout-modal h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .checkout-modal h3 .gold { color: var(--accent-gold); }
+
+        .checkout-modal .checkout-sub {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 22px;
+            line-height: 1.5;
+        }
+
+        .checkout-plan-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'Space Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .checkout-plan-tag.pro {
+            background: var(--accent-gold-dim);
+            color: var(--accent-gold);
+            border: 1px solid rgba(245, 166, 35, 0.15);
+        }
+
+        .checkout-plan-tag.agency {
+            background: var(--accent-blue-dim);
+            color: var(--accent-blue);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+        }
+
+        .checkout-field {
+            margin-bottom: 16px;
+        }
+
+        .checkout-field label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+
+        .checkout-field input {
+            width: 100%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 14px;
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-primary);
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .checkout-field input:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px var(--accent-blue-dim);
+        }
+
+        .checkout-field input::placeholder { color: var(--text-muted); }
+
+        .checkout-field input.error {
+            border-color: var(--danger);
+            box-shadow: 0 0 0 3px var(--danger-dim);
+        }
+
+        .checkout-error {
+            font-size: 12px;
+            color: var(--danger);
+            margin-top: 6px;
+            display: none;
+        }
+
+        .checkout-error.active { display: block; }
+
+        .checkout-submit {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .checkout-submit.gold {
+            background: linear-gradient(135deg, var(--accent-gold), #e09500);
+            color: var(--bg-deep);
+        }
+
+        .checkout-submit.gold:hover { box-shadow: 0 8px 24px rgba(245, 166, 35, 0.3); }
+
+        .checkout-submit.blue {
+            background: var(--accent-blue);
+            color: var(--white);
+        }
+
+        .checkout-submit.blue:hover { box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3); }
+
+        .checkout-submit:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        .checkout-footer {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 11px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .checkout-footer svg {
+            width: 12px;
+            height: 12px;
+            color: var(--success);
+        }
+
         /* ── Paywall Modal ───────────────────────────────────── */
         .paywall-overlay {
             display: none;
@@ -1399,6 +1596,29 @@
         </div>
     </section>
 
+    <!-- Checkout Modal -->
+    <div class="checkout-overlay" id="checkout-overlay" onclick="if(event.target===this)closeCheckoutModal()">
+        <div class="checkout-modal">
+            <button class="checkout-close" onclick="closeCheckoutModal()">✕</button>
+            <div class="checkout-icon" id="checkout-icon">⚡</div>
+            <div class="checkout-plan-tag" id="checkout-plan-tag">Pro · Monthly</div>
+            <h3>Upgrade to <span class="gold" id="checkout-plan-name">Pro</span></h3>
+            <p class="checkout-sub" id="checkout-sub">Enter your email to continue to secure checkout via Stripe.</p>
+            <div class="checkout-field">
+                <label for="checkout-email">Email address</label>
+                <input type="email" id="checkout-email" placeholder="you@company.com" autocomplete="email">
+                <div class="checkout-error" id="checkout-email-error">Please enter a valid email address.</div>
+            </div>
+            <button class="checkout-submit gold" id="checkout-submit-btn" onclick="submitCheckout()">
+                Continue to Checkout →
+            </button>
+            <div class="checkout-footer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Secured by Stripe · 256-bit encryption
+            </div>
+        </div>
+    </div>
+
     <!-- Paywall -->
     <div class="paywall-overlay" id="paywall">
         <div class="paywall-card">
@@ -1503,22 +1723,76 @@
                 : '&nbsp;';
         }
 
-        // ── Stripe Checkout (FIXED: sends interval) ──────────
-        async function startStripeCheckout(plan) {
-            // Try to get email from gate, or prompt
-            let email = localStorage.getItem('bscan_email') || '';
-            if (!email) {
-                email = prompt('Enter your email for checkout:');
-            }
-            if (!email || !email.includes('@')) {
-                alert('A valid email is required for checkout.');
+        // ── Checkout Modal Logic ──────────────────────────────
+        let checkoutPlan = '';
+
+        function startStripeCheckout(plan) {
+            checkoutPlan = plan;
+            const isAnnual = currentInterval === 'annual';
+            const price = PRICING[plan] ? PRICING[plan][currentInterval] : '?';
+            const intervalLabel = isAnnual ? 'Annual' : 'Monthly';
+
+            // Update modal content
+            const planName = plan.charAt(0).toUpperCase() + plan.slice(1);
+            document.getElementById('checkout-plan-name').textContent = planName;
+            document.getElementById('checkout-plan-tag').textContent = planName + ' · ' + intervalLabel;
+            document.getElementById('checkout-plan-tag').className = 'checkout-plan-tag ' + plan;
+            document.getElementById('checkout-sub').textContent =
+                `£${price}/${isAnnual ? 'mo (billed annually)' : 'mo'} — enter your email to continue to secure checkout.`;
+
+            // Button style
+            const submitBtn = document.getElementById('checkout-submit-btn');
+            submitBtn.className = plan === 'pro' ? 'checkout-submit gold' : 'checkout-submit blue';
+            submitBtn.innerHTML = 'Continue to Checkout →';
+            submitBtn.disabled = false;
+
+            // Pre-fill email if we already have one
+            const emailInput = document.getElementById('checkout-email');
+            emailInput.value = localStorage.getItem('bscan_email') || '';
+            emailInput.classList.remove('error');
+            document.getElementById('checkout-email-error').classList.remove('active');
+
+            // Show modal
+            document.getElementById('checkout-overlay').classList.add('active');
+            setTimeout(() => emailInput.focus(), 100);
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkout-overlay').classList.remove('active');
+        }
+
+        document.getElementById('checkout-email').addEventListener('keydown', e => {
+            if (e.key === 'Enter') submitCheckout();
+            // Clear error state on typing
+            e.target.classList.remove('error');
+            document.getElementById('checkout-email-error').classList.remove('active');
+        });
+
+        async function submitCheckout() {
+            const emailInput = document.getElementById('checkout-email');
+            const email = emailInput.value.trim();
+            const errorEl = document.getElementById('checkout-email-error');
+            const submitBtn = document.getElementById('checkout-submit-btn');
+
+            // Validate
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                emailInput.classList.add('error');
+                errorEl.classList.add('active');
+                emailInput.focus();
                 return;
             }
+
+            // Loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<div class="spinner"></div> Redirecting to Stripe...';
+
+            // Save email for future
+            localStorage.setItem('bscan_email', email);
 
             const body = { email, interval: currentInterval };
 
             try {
-                const res = await fetch(API + '/api/billing/checkout/' + plan, {
+                const res = await fetch(API + '/api/billing/checkout/' + checkoutPlan, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(body),
@@ -1527,12 +1801,23 @@
                 if (data.checkout_url) {
                     window.location = data.checkout_url;
                 } else {
-                    alert(data.detail || 'Could not start checkout. Please try again.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Continue to Checkout →';
+                    errorEl.textContent = data.detail || 'Could not start checkout. Please try again.';
+                    errorEl.classList.add('active');
                 }
             } catch (e) {
-                alert('Network error. Please try again later.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Continue to Checkout →';
+                errorEl.textContent = 'Network error. Please try again.';
+                errorEl.classList.add('active');
             }
         }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeCheckoutModal();
+        });
 
         // ── State ────────────────────────────────────────────
         let scansUsed = parseInt(localStorage.getItem('bscan_scans') || '0');
