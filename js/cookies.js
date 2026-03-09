@@ -15,7 +15,7 @@
     <div class="cb-content">
       <div class="cb-text">
         <strong>🍪 We use cookies</strong>
-        <p>We use essential cookies to make our site work, and optional analytics cookies to understand how you use it. See our <a href="cookies.html">Cookie Policy</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>We use essential cookies to make our site work, and optional analytics cookies to understand how you use it. See our <a href="/cookies">Cookie Policy</a> and <a href="/privacy">Privacy Policy</a>.</p>
       </div>
       <div class="cb-actions">
         <button id="cbDecline" class="cb-btn cb-btn-secondary">Essential Only</button>
