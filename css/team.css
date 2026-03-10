@@ -1,0 +1,29 @@
+/*
+ * Balancewise Technologies — Team Page Additions
+ * Add to /css/team.css or append to style.css
+ * ================================================== */
+
+/* tc-desc (team card description text) */
+.tc-desc {
+  font-size: 0.845rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+.tc-desc a {
+  color: var(--blue2);
+  font-weight: 600;
+  text-decoration: none;
+}
+.tc-desc a:hover {
+  text-decoration: underline;
+}
+
+/* section-sub (centred section subtitle — used under .section-header.center) */
+.section-sub {
+  font-size: 0.975rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto;
+}
