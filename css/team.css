@@ -5,9 +5,9 @@
 
 /* tc-desc (team card description text) */
 .tc-desc {
-  font-size: 0.845rem;
+  font-size: 0.875rem;
   color: var(--text-body);
-  line-height: 1.65;
+  line-height: 1.7;
   margin-bottom: 0;
 }
 .tc-desc a {
@@ -18,12 +18,282 @@
 .tc-desc a:hover {
   text-decoration: underline;
 }
+.tc-desc strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
 
-/* section-sub (centred section subtitle — used under .section-header.center) */
+/* section-sub (centred section subtitle) */
 .section-sub {
   font-size: 0.975rem;
   color: var(--text-body);
   line-height: 1.75;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* ── ENHANCED TEAM CARDS ── */
+
+/* 2-column layout for team page */
+.team-grid--duo {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: stretch;
+}
+
+/* Founder card — featured treatment */
+.team-card--founder {
+  background: var(--card-bg);
+  border: 2px solid var(--blue2);
+  border-radius: 16px;
+  padding: 2.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-card--founder::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--navy), var(--blue2), var(--gold));
+}
+.team-card--founder::after {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.team-card--founder:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(37,99,235,0.12);
+}
+
+/* Founder header row */
+.tc-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.tc-header-text .tc-role {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue2);
+  margin-bottom: 0.15rem;
+}
+.tc-header-text .tc-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+/* Founder avatar — larger */
+.tc-avatar--lg {
+  width: 64px; height: 64px;
+  background: #eff6ff;
+  border-radius: 50%;
+  border: 2.5px solid var(--blue2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .tc-avatar--lg {
+  background: rgba(37,99,235,0.15);
+  border-color: rgba(37,99,235,0.4);
+}
+
+/* Global reach badge */
+.tc-reach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(8,19,54,0.04) 0%, rgba(37,99,235,0.04) 100%);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+[data-theme="dark"] .tc-reach {
+  background: linear-gradient(135deg, rgba(37,99,235,0.06) 0%, rgba(245,158,11,0.04) 100%);
+}
+.tc-reach-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+.tc-reach-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tc-reach-dot--uk { background: #2563eb; }
+.tc-reach-dot--us { background: #ef4444; }
+.tc-reach-dot--ca { background: #f59e0b; }
+.tc-reach-dot--global { background: #4ade80; }
+
+/* Enhanced tags */
+.tc-tags--bold {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+}
+.tc-tags--bold span {
+  background: var(--blue2);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.7rem;
+  border-radius: 5px;
+}
+
+/* LinkedIn section */
+.tc-linkedin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+/* ── NETWORK CARD ── */
+.team-card--network {
+  background: linear-gradient(150deg, var(--navy) 0%, var(--navy2) 100%);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 2.25rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-card--network::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--blue3));
+}
+.team-card--network::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.team-card--network:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(8,19,54,0.4);
+}
+
+.tc-net-icon {
+  width: 52px; height: 52px;
+  background: rgba(245,158,11,0.12);
+  border: 1.5px solid rgba(245,158,11,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tc-net-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+.tc-net-title em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.tc-net-desc {
+  font-size: 0.855rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+.tc-net-desc strong {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Network stats row */
+.tc-net-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.tc-net-stat {
+  padding: 0.75rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  text-align: center;
+}
+.tc-net-stat-val {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+.tc-net-stat-lbl {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* Network tags */
+.tc-net-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+}
+.tc-net-tags span {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+}
+
+/* Network CTA */
+.tc-net-btns {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .team-grid--duo {
+    grid-template-columns: 1fr;
+  }
 }
