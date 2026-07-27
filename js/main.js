@@ -112,55 +112,6 @@ const revObs = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.rev, .rev-r').forEach(el => revObs.observe(el));
 
-// ── TOAST ──
-const toast = document.getElementById('toast');
-function showToast(msg, err = false) {
-  if (!toast) return;
-  toast.textContent = msg;
-  toast.style.background = err ? '#dc2626' : '#081336';
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 5000);
-}
-
-// ── FORMS ──
-function hookForm(formId, btnId, apiUrl) {
-  const form = document.getElementById(formId);
-  if (!form) return;
-
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const btn = document.getElementById(btnId);
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    const data = {};
-    new FormData(form).forEach((v, k) => { data[k] = v; });
-
-    try {
-      await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-    } catch (err) { /* server may not be running on static host */ }
-
-    showToast(
-      apiUrl.includes('apply')
-        ? 'Application received! We will be in touch shortly.'
-        : 'Enquiry received! We will respond within 24 hours.'
-    );
-    form.reset();
-    btn.disabled = false;
-    btn.textContent = btnId === 'applyBtn' ? 'Submit Application' : 'Send Enquiry';
-  });
-}
-
-hookForm('contactForm', 'contactBtn', 'https://formspree.io/f/xkoveoyr');
-hookForm('applyForm',   'applyBtn',   'https://formspree.io/f/xkoveoyr');
-
 // Input validation visual feedback
 document.querySelectorAll('input[required], textarea[required]').forEach(el => {
   el.addEventListener('blur', () => {

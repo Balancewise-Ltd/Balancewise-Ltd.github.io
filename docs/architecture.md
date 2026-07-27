@@ -17,6 +17,9 @@ Apply Page:
 Contact Page:
 /contact
 
+Guided Enquiry:
+/enquire
+
 Cookies Page:
 /cookies
 
@@ -39,6 +42,19 @@ Terms Page:
 - images
 
 ## Deployment
-Hosted using GitHub Pages.
+The static corporate site is hosted using GitHub Pages.
 
-Future backend may include REST APIs, scan workers, and a database.
+The guided enquiry posts to `https://api-bscan.balancewises.io/api/company-leads`.
+That API validates Cloudflare Turnstile, applies per-IP rate limits, writes to
+PostgreSQL, notifies `info@balancewises.io` and sends the client an automated,
+route-specific acknowledgement. Lead records are visible only through the
+authenticated admin console at `https://admin-bscan.balancewises.io`.
+
+Required backend secrets:
+
+- `TURNSTILE_SITE_KEY`
+- `TURNSTILE_SECRET_KEY`
+- `COMPANY_LEAD_TO` (defaults to `info@balancewises.io`)
+
+The API server, Celery worker and Celery beat service must be restarted after
+deployment. Run `alembic upgrade head` before restarting the API.

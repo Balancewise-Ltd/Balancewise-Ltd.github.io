@@ -49,7 +49,7 @@
       <li><a href="/ai">AI Solutions</a></li>
       <li><a href="/team">Our Team</a></li>
       <li><a href="/apply">Join Us</a></li>
-      <li><a href="/contact" class="nav-cta">Get a Quote</a></li>
+      <li><a href="/enquire/" class="nav-cta">Get a Quote</a></li>
     </ul>
     <div class="nav-right">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -72,8 +72,8 @@
   <section class="bg-white">
     <div class="legal-page">
       <div class="legal-meta">
-        <strong>Last updated:</strong> 3 April 2026 &middot;
-        <strong>Version:</strong> 2.0 &middot;
+        <strong>Last updated:</strong> 27 July 2026 &middot;
+        <strong>Version:</strong> 2.1 &middot;
         <strong>ICO Registration:</strong> ZB973909
       </div>
 
@@ -171,8 +171,9 @@
 
       <h3>3.5 Contact and Application Data (Corporate Website)</h3>
       <ul>
-        <li>Name, email address, company name, service enquiry and message content</li>
-        <li>Job applications: full name, email, role applied for, GitHub URL, LinkedIn URL and personal statement</li>
+        <li>Contact enquiries: name, email address, phone number, company name, selected requirements, timing and engagement preferences</li>
+        <li>Job applications: full name, email address, phone number, discipline, availability and an optional GitHub, portfolio or CV link</li>
+        <li>Enquiry attribution: source page and, when present, campaign source, medium and campaign name</li>
       </ul>
 
       <p>We do <strong>not</strong> collect sensitive personal data such as racial or ethnic origin, health data, political opinions, religious beliefs, trade union membership or biometric data for identification purposes.</p>
@@ -183,8 +184,7 @@
         <li><strong>Profile updates</strong> -- when you edit your profile or settings</li>
         <li><strong>Content creation</strong> -- when you post, comment, upload media or send messages</li>
         <li><strong>Scanning</strong> -- when you submit URLs for BSCAN analysis</li>
-        <li><strong>Contact forms</strong> -- when you submit enquiries on our corporate website</li>
-        <li><strong>Application forms</strong> -- when you apply for a role</li>
+        <li><strong>Guided enquiry form</strong> -- when you request IT talent, technology services or submit an application</li>
         <li><strong>Automated collection</strong> -- server logs, error tracking (Sentry), and analytics</li>
         <li><strong>Cookies</strong> -- see our <a href="/cookies">Cookie Policy</a></li>
         <li><strong>Third-party authentication</strong> -- when you sign in via Google SSO</li>
@@ -200,8 +200,8 @@
         <tr><td>Sending scan results by email</td><td>Email address, scan results</td><td>Contract performance (Article 6(1)(b))</td></tr>
         <tr><td>Age verification</td><td>Date of birth</td><td>Legal obligation (Article 6(1)(c)) -- UK Online Safety Act</td></tr>
         <tr><td>Content moderation and safety</td><td>Posts, messages, reports</td><td>Legal obligation (Article 6(1)(c)) -- UK Online Safety Act</td></tr>
-        <tr><td>Responding to contact enquiries</td><td>Name, email, message</td><td>Legitimate interests (Article 6(1)(f))</td></tr>
-        <tr><td>Processing job applications</td><td>Application data</td><td>Legitimate interests / Pre-contractual steps</td></tr>
+        <tr><td>Responding to contact enquiries</td><td>Contact details, company, requirements and timing</td><td>Legitimate interests (Article 6(1)(f))</td></tr>
+        <tr><td>Processing job applications</td><td>Contact details, discipline, availability and optional profile link</td><td>Legitimate interests / Pre-contractual steps</td></tr>
         <tr><td>Improving our services and fixing bugs</td><td>Technical data, error reports</td><td>Legitimate interests (Article 6(1)(f))</td></tr>
         <tr><td>Website analytics</td><td>Usage data</td><td>Consent (Article 6(1)(a)) -- via cookie banner</td></tr>
         <tr><td>Marketing emails</td><td>Email address</td><td>Consent (Article 6(1)(a)) -- opt-in only</td></tr>
@@ -216,7 +216,9 @@
         <li>Our servers are hosted on <strong>DigitalOcean</strong> (data centres in London, UK and Frankfurt, EU)</li>
         <li>Media files (images, videos, documents) are stored on <strong>Cloudflare R2</strong> with encryption at rest, served via media.wisrs.com</li>
         <li>The corporate website is hosted on <strong>GitHub Pages</strong></li>
-        <li>Form submissions are processed via <strong>Formspree</strong></li>
+        <li>Corporate enquiries are stored in our access-controlled <strong>PostgreSQL database</strong> and are available only to authorised staff through our authenticated administration system</li>
+        <li><strong>Cloudflare Turnstile</strong> protects the enquiry form against automated abuse; its token is validated by our server and is not stored in the lead record</li>
+        <li><strong>Resend</strong> delivers transactional lead notifications and acknowledgements</li>
         <li>Email is hosted on <strong>Zoho Mail</strong> (EU/UK data centres)</li>
       </ul>
 
@@ -240,13 +242,12 @@
       <table class="legal-table">
         <tr><th>Provider</th><th>Purpose</th><th>Location</th><th>Safeguard</th></tr>
         <tr><td>DigitalOcean</td><td>Server hosting</td><td>UK/EU</td><td>UK adequacy</td></tr>
-        <tr><td>Cloudflare</td><td>CDN, DNS, R2 storage, DDoS protection</td><td>Global (EU/UK processing)</td><td>SCCs</td></tr>
+        <tr><td>Cloudflare</td><td>CDN, DNS, R2 storage, DDoS and Turnstile abuse protection</td><td>Global (EU/UK processing)</td><td>SCCs</td></tr>
         <tr><td>Stripe</td><td>Payment processing</td><td>USA</td><td>SCCs, PCI DSS certified</td></tr>
         <tr><td>Google (Analytics)</td><td>Website analytics (with consent)</td><td>USA</td><td>SCCs</td></tr>
         <tr><td>Google (OAuth)</td><td>Sign in with Google</td><td>USA</td><td>SCCs</td></tr>
         <tr><td>Sentry</td><td>Error tracking and monitoring</td><td>EU</td><td>UK adequacy</td></tr>
         <tr><td>Zoho Mail</td><td>Email hosting</td><td>EU</td><td>UK adequacy</td></tr>
-        <tr><td>Formspree</td><td>Form submission processing</td><td>USA</td><td>SCCs</td></tr>
         <tr><td>GitHub</td><td>Corporate website hosting, code repositories</td><td>USA</td><td>SCCs</td></tr>
         <tr><td>Resend</td><td>Transactional email delivery</td><td>USA</td><td>SCCs</td></tr>
       </table>
@@ -271,7 +272,7 @@
         <tr><td>Direct messages</td><td>End-to-end encrypted; deleted when both parties delete them or delete their accounts</td></tr>
         <tr><td>Scan results (BSCAN)</td><td>12 months from scan date</td></tr>
         <tr><td>API usage logs</td><td>12 months</td></tr>
-        <tr><td>Contact enquiry data</td><td>12 months from last correspondence</td></tr>
+        <tr><td>Contact enquiry data</td><td>12 months from submission</td></tr>
         <tr><td>Job application data</td><td>6 months from application date</td></tr>
         <tr><td>Analytics data</td><td>26 months (Google Analytics default)</td></tr>
         <tr><td>Server logs</td><td>90 days</td></tr>

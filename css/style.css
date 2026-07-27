@@ -876,6 +876,35 @@ section { padding: 5.5rem 5%; }
 }
 .form-submit:hover { background: var(--navy2); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(8,19,54,0.2); }
 .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.form-submit-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.form-benefits {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.form-benefits li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--text-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.form-benefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.48rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--blue2);
+}
 
 /* ── CTA BANNER ── */
 .cta-banner {
