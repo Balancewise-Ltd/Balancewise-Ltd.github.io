@@ -23,6 +23,14 @@
   --card-bg:   #ffffff;
   --nav-bg:    rgba(8,19,54,0.97);
   --footer-bg: #081336;
+
+  /* Shared spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
 }
 
 /* Dark mode overrides */
@@ -42,6 +50,13 @@
 /* ── RESET ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+.stack.stack > * { margin-block: 0; }
+.stack--lg { gap: var(--space-lg); }
 
 body {
   font-family: 'Syne', sans-serif;
@@ -877,14 +892,20 @@ section { padding: 5.5rem 5%; }
 .form-submit:hover { background: var(--navy2); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(8,19,54,0.2); }
 .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 .form-submit-link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  width: fit-content;
+  min-height: 48px;
+  padding-inline: var(--space-lg);
   text-align: center;
   text-decoration: none;
 }
 .form-benefits {
   display: grid;
-  gap: 0.7rem;
-  margin: 0 0 1.5rem;
+  gap: var(--space-sm);
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1038,6 +1059,11 @@ footer {
   .team-grid, .apply-grid, .roles-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+  .form-box { padding: 1.5rem; }
+  .form-submit-link {
+    align-self: stretch;
+    width: 100%;
+  }
   .service-detail { grid-template-columns: 1fr; }
   .sd-icon { width: 56px; height: 56px; font-size: 1.5rem; }
   .page-hero h1 { font-size: 2rem; }
