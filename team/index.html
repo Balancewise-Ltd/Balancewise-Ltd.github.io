@@ -22,12 +22,13 @@
   <meta name="twitter:title" content="Our Team — Balancewise Technologies">
   <meta name="twitter:description" content="A British tech startup seeking collaborators, engineers, and partners.">
   <meta name="twitter:image" content="https://balancewises.io/assets/images/og-image.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/team.css">
+  <link rel="stylesheet" href="/css/privacy-accessibility.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="cursor"></div>
   <div id="cursorRing"></div>
   <div class="toast" id="toast"></div>
@@ -51,11 +52,12 @@
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark / light mode">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zm9-9h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zM5 12a1 1 0 0 1-1 1H2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1zm11.95-5.54 1.41-1.41a1 1 0 0 1 1.42 1.41L18.36 7.88a1 1 0 0 1-1.41-1.42zm-12.68 10.6L2.86 18.47a1 1 0 0 1 1.41-1.41l1.41 1.41a1 1 0 0 1-1.41 1.41zM18.36 16.12l1.41 1.41a1 1 0 0 1-1.41 1.41l-1.41-1.41a1 1 0 0 1 1.41-1.41zM4.22 7.05 5.64 8.46A1 1 0 0 1 4.22 9.88L2.81 8.46a1 1 0 0 1 1.41-1.41z"/></svg>
       </button>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+<main id="main-content" tabindex="-1">
 
   <section class="page-hero">
     <div class="page-hero-lines"></div>
@@ -115,7 +117,7 @@
             </div>
           </div>
           <p class="tc-desc">
-            <strong>Founder of Balancewise Ltd</strong> and the engineer behind the systems and tools we ship. Chisom collaborates with trusted engineers and contractors across the <strong>UK, USA, and Canada</strong> &mdash; delivering software, cloud infrastructure, AI integration, and IT staffing solutions across multiple sectors. He built <a href="https://bscan.balancewises.io/" target="_blank">BSCAN</a>, our free website audit tool, from the ground up. Azure certified, full-stack capable, and always delivering.
+            <strong>Founder of Balancewise Ltd</strong> and the engineer behind the systems and tools we ship. Chisom collaborates with trusted engineers and contractors across the <strong>UK, USA, and Canada</strong> &mdash; delivering software, cloud infrastructure, AI integration, and IT staffing solutions across multiple sectors. He built <a href="https://bscan.balancewises.io/" target="_blank">BSCAN</a>, our free website audit tool, from the ground up. His work spans full-stack development and cloud infrastructure.
           </p>
 
           <div class="tc-reach">
@@ -131,7 +133,6 @@
 
           <div class="tc-linkedin">
             <a href="https://uk.linkedin.com/in/chisom-k-192749252" target="_blank" class="btn btn-outline" style="font-size:0.82rem;padding:0.55rem 1.3rem">Connect on LinkedIn &rarr;</a>
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="chisom-k-192749252" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://uk.linkedin.com/in/chisom-k-192749252?trk=profile-badge">Chisom K.</a></div>
           </div>
         </div>
 
@@ -239,6 +240,7 @@
     </div>
   </section>
 
+</main>
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -294,9 +296,9 @@
         </div>
       </div>
     </div>
-  </footer>
+  <nav class="legal-footer-links" aria-label="Company policies"><a href="/legal/">Legal &amp; business details</a><a href="/refunds/">Refunds</a><a href="/data-rights/">Your data rights</a><a href="/accessibility/">Accessibility</a><a href="/licenses/">Licences</a><button type="button" data-cookie-settings>Cookie settings</button></nav></footer>
 
   <script src="/js/main.js"></script>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<script src="/js/cookies.js" defer></script>
 </body>
 </html>

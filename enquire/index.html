@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://api-bscan.balancewises.io; frame-src https://challenges.cloudflare.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self'; font-src 'self'; connect-src https://api-bscan.balancewises.io; frame-src https://challenges.cloudflare.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <title>Start an Enquiry | Balancewise Technologies</title>
   <meta name="description" content="Tell Balancewise Technologies what IT talent, software, cloud, data or AI support you need. Our team replies within one working day.">
   <meta name="robots" content="index, follow">
@@ -16,16 +16,16 @@
   <meta property="og:url" content="https://balancewises.io/enquire/">
   <meta property="og:image" content="https://balancewises.io/assets/images/og-image.jpg">
   <script src="/js/enquire-theme.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/enquire.css">
+
+<link rel="stylesheet" href="/css/enquire.css">
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
   <script src="/js/enquire.js" defer></script>
+  <link rel="stylesheet" href="/css/privacy-accessibility.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="scan" aria-hidden="true"><div class="scan__fill" id="scanFill"></div></div>
-  <main class="wrap">
+  <main id="main-content" tabindex="-1" class="wrap">
     <div class="console">
       <div class="topbar">
         <a class="brand" href="/" aria-label="Balancewise Technologies home">
@@ -36,6 +36,7 @@
       <div id="view"></div>
       <p id="formStatus" class="sr-only" role="status" aria-live="polite"></p>
     </div>
-  </main>
+  </main><nav class="legal-footer-links" aria-label="Policies"><a href="/legal/">Legal &amp; privacy</a><button type="button" data-cookie-settings>Cookie settings</button></nav>
+<script src="/js/cookies.js" defer></script>
 </body>
 </html>

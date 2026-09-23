@@ -1,7 +1,7 @@
 'use strict';
 (function(){
   const c=document.getElementById('heroCanvas');
-  if(!c||typeof THREE==='undefined')return;
+  if(!c||typeof THREE==='undefined'||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(75,c.offsetWidth/c.offsetHeight,.1,1000);
   cam.position.z=30;
   const r=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:true});

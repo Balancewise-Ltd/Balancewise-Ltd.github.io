@@ -22,17 +22,18 @@
   <meta name="twitter:title" content="Join Our Team | Balancewise Technologies">
   <meta name="twitter:description" content="Open IT roles — temporary, permanent and freelance. Apply now.">
   <meta name="twitter:image" content="https://balancewises.io/assets/images/og-image.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/css/style.css?v=20260727-3">
+  <link rel="stylesheet" href="/css/privacy-accessibility.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div id="cursor"></div>
   <div id="cursorRing"></div>
   <div class="toast" id="toast"></div>
 
   <nav class="navbar" id="navbar">
-    <a href="index.html" class="nav-brand">Balancewise <em>Technologies</em></a>
+    <a href="/" class="nav-brand">Balancewise <em>Technologies</em></a>
     <ul class="nav-menu" id="navMenu">
       <li><a href="/services">Services</a></li>
       <li><a href="/staffing">Staffing</a></li>
@@ -50,18 +51,19 @@
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark / light mode">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zm9-9h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zM5 12a1 1 0 0 1-1 1H2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1zm11.95-5.54 1.41-1.41a1 1 0 0 1 1.42 1.41L18.36 7.88a1 1 0 0 1-1.41-1.42zm-12.68 10.6L2.86 18.47a1 1 0 0 1 1.41-1.41l1.41 1.41a1 1 0 0 1-1.41 1.41zM18.36 16.12l1.41 1.41a1 1 0 0 1-1.41 1.41l-1.41-1.41a1 1 0 0 1 1.41-1.41zM4.22 7.05 5.64 8.46A1 1 0 0 1 4.22 9.88L2.81 8.46a1 1 0 0 1 1.41-1.41z"/></svg>
       </button>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+<main id="main-content" tabindex="-1">
 
 
   <section class="page-hero">
     <div class="page-hero-lines"></div>
     <div class="page-hero-glow"></div>
     <div class="page-hero-inner">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Join Us</div>
+      <div class="breadcrumb"><a href="/">Home</a><span>/</span>Join Us</div>
       <h1 class="rev">Would You Like to<br><em>Be Part of Us?</em></h1>
       <p class="rev" data-delay=".06">We are always looking for talented IT professionals to join our growing network &mdash; for long-term positions, project work or open source contributions. All applications reviewed personally.</p>
       <div class="page-hero-btns rev" data-delay=".12">
@@ -128,6 +130,7 @@
   </section>
 
 
+</main>
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -182,10 +185,10 @@
         </div>
       </div>
     </div>
-  </footer>
+  <nav class="legal-footer-links" aria-label="Company policies"><a href="/legal/">Legal &amp; business details</a><a href="/refunds/">Refunds</a><a href="/data-rights/">Your data rights</a><a href="/accessibility/">Accessibility</a><a href="/licenses/">Licences</a><button type="button" data-cookie-settings>Cookie settings</button></nav></footer>
 
   <script src="/js/main.js"></script>
   <script src="/js/cookies.js"></script>
-  
+
 </body>
 </html>

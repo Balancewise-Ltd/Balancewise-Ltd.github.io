@@ -6,7 +6,8 @@
 
 // ── THEME ──
 const root = document.documentElement;
-const savedTheme = localStorage.getItem('bwt-theme') || 'light';
+let savedTheme = 'light';
+try { if (localStorage.getItem('bwt-theme') === 'dark') savedTheme = 'dark'; } catch {}
 root.setAttribute('data-theme', savedTheme);
 
 function setThemeIcon(theme) {
@@ -22,7 +23,7 @@ document.getElementById('themeToggle')?.addEventListener('click', () => {
   const current = root.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
-  localStorage.setItem('bwt-theme', next);
+  try { localStorage.setItem('bwt-theme', next); } catch {}
   setThemeIcon(next);
 });
 
@@ -31,74 +32,41 @@ document.getElementById('themeToggleMobile')?.addEventListener('click', () => {
   const current = root.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
-  localStorage.setItem('bwt-theme', next);
+  try { localStorage.setItem('bwt-theme', next); } catch {}
   setThemeIcon(next);
   const label = document.getElementById('themeLabel');
   if (label) label.textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
 });
 
-// ── CURSOR (desktop only) ──
-const cursor = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
-
-if (cursor && window.matchMedia('(pointer:fine)').matches) {
-  let mx=0, my=0, rx=0, ry=0;
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top  = my + 'px';
-  });
-  (function animRing() {
-    rx += (mx - rx) * 0.14;
-    ry += (my - ry) * 0.14;
-    cursorRing.style.left = rx + 'px';
-    cursorRing.style.top  = ry + 'px';
-    requestAnimationFrame(animRing);
-  })();
-}
-
-// ── NAVBAR ──
+// Native pointer and keyboard navigation.
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
-
+window.addEventListener('scroll', () => navbar?.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
 const hamburger = document.getElementById('hamburger');
-const navMenu   = document.getElementById('navMenu');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navMenu.classList.toggle('open');
+const navMenu = document.getElementById('navMenu');
+function setMenu(open, restoreFocus = false) {
+  hamburger?.classList.toggle('open', open);
+  hamburger?.setAttribute('aria-expanded', String(open));
+  hamburger?.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  navMenu?.classList.toggle('open', open);
+  if (restoreFocus) hamburger?.focus();
+}
+hamburger?.addEventListener('click', () => setMenu(hamburger.getAttribute('aria-expanded') !== 'true'));
+navMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('click', event => { if (!navbar?.contains(event.target)) setMenu(false); });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && hamburger?.getAttribute('aria-expanded') === 'true') setMenu(false, true);
 });
-
-navMenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navMenu.classList.remove('open');
-  });
+navMenu?.querySelectorAll('a:not(.nav-cta)').forEach(a => {
+  if (new URL(a.href).pathname === location.pathname) a.setAttribute('aria-current', 'page');
 });
-
-// Close nav on outside click
-document.addEventListener('click', e => {
-  if (!navbar.contains(e.target)) {
-    hamburger.classList.remove('open');
-    navMenu.classList.remove('open');
-  }
-});
-
-// Active nav link
-const page = location.pathname.split('/').pop() || 'index.html';
-navMenu.querySelectorAll('a:not(.nav-cta)').forEach(a => {
-  if (a.getAttribute('href') === page) a.classList.add('active');
-});
-
-// ── SMOOTH SCROLL ──
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-  });
-});
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', event => {
+  const target = document.getElementById(a.getAttribute('href').slice(1));
+  if (!target) return;
+  event.preventDefault();
+  if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+  target.focus({ preventScroll: true });
+  target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+}));
 
 // ── SCROLL REVEAL ──
 const revObs = new IntersectionObserver(entries => {

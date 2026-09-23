@@ -141,7 +141,7 @@ function renderIntro() {
       <h1>Expert IT talent and technology, on demand.</h1>
       <p class="sub intro-sub">A few quick choices, then your details. A person from our team replies within one working day.</p>
       <button class="cta" id="startBtn" type="button">Start</button>
-      <div class="meta">Newcastle &middot; UK-wide &middot; VAT and ICO registered</div>
+      <div class="meta">Balancewise Ltd &middot; England and Wales &middot; Company 16164776</div>
     </div>`;
   document.getElementById('startBtn').onclick = () => go(1);
 }
@@ -204,7 +204,7 @@ function renderContact() {
         <div class="err" id="e-email">Enter a valid email address.</div>
       </div>
       <div class="field">
-        <label for="f-phone">Phone <span class="req">*</span></label>
+        <label for="f-phone">Phone <span class="optional">(optional)</span></label>
         <input id="f-phone" type="tel" maxlength="40" inputmode="tel" autocomplete="tel" placeholder="+44 7700 900000" value="${esc(contact.phone)}">
         <div class="err" id="e-phone">Enter a valid phone number.</div>
       </div>
@@ -219,7 +219,7 @@ function renderContact() {
         </div>` : ''}
       <label class="consent" id="consentLabel">
         <input type="checkbox" id="f-consent">
-        <span>I have read the <a href="${PRIVACY_URL}" target="_blank" rel="noopener">privacy policy</a> and agree to be contacted about this enquiry.</span>
+        <span>I have read the <a href="${PRIVACY_URL}" target="_blank" rel="noopener">privacy policy</a> and agree to be contacted about this enquiry. This does not sign me up for marketing.</span>
       </label>
       <div class="turnstile-box" id="turnstile-widget" aria-label="Human verification"></div>
       <p class="verification-error hidden" id="verificationError"></p>
@@ -274,6 +274,7 @@ async function renderVerification() {
 
 const validEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 const validPhone = (value) => {
+  if (!value.trim()) return true;
   const digits = value.replace(/[^\d]/g, '');
   return digits.length >= 7 && digits.length <= 15 && /^[+\d][\d\s().-]{5,39}$/.test(value.trim());
 };
@@ -284,6 +285,8 @@ function validateContact() {
     const input = document.getElementById(inputId);
     const error = document.getElementById(errorId);
     input.classList.toggle('invalid', !passes);
+    input.setAttribute('aria-invalid', String(!passes));
+    input.setAttribute('aria-describedby', errorId);
     error.classList.toggle('show', !passes);
     if (!passes) valid = false;
   };
@@ -292,6 +295,10 @@ function validateContact() {
   check('f-phone', 'e-phone', validPhone(contact.phone));
   const consent = document.getElementById('f-consent').checked;
   document.getElementById('consentLabel').classList.toggle('invalid', !consent);
+  if (!valid || !consent) {
+    formStatus.textContent = !valid ? 'Check the highlighted contact details.' : 'Please confirm that we may reply to your enquiry.';
+    (view.querySelector('input.invalid') || document.getElementById('f-consent')).focus();
+  }
   return valid && consent;
 }
 
@@ -384,12 +391,15 @@ function renderDone() {
 function go(index) {
   stepIndex = index;
   render();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  const heading = view.querySelector('h1');
+  heading?.setAttribute('tabindex', '-1');
+  heading?.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 }
 
 document.addEventListener('keydown', (event) => {
   const questions = flow();
-  if (stepIndex < 1 || stepIndex > questions.length) return;
+  if (stepIndex < 1 || stepIndex > questions.length || !view.contains(document.activeElement) || event.ctrlKey || event.altKey || event.metaKey) return;
   const question = questions[stepIndex - 1];
   const key = event.key.toUpperCase();
   let index = KEYS.includes(key) ? KEYS.indexOf(key) : -1;
