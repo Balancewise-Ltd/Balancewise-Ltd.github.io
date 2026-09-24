@@ -13,7 +13,7 @@ This is an implementation and evidence record, not a declaration of complete leg
 | 5. Cookie notice | Added versioned essential-storage notice, dismiss control and reopenable accessible dialog on all active sites. | Browser tests cover dismissal, reopening, keyboard focus and expired/versioned notice handling. No fictitious tracking consent is collected. |
 | 6. Form permission | Enquiry permission is distinct from marketing. Fixed Enter-key signup bypass; added server validation and recorded choices. | Offline endpoint tests and mocked browser signup checks. Existing users are not retroactively marked as consenting. |
 | 7. Data minimisation | Enquiry phone and BSCAN profile address/contact fields are optional. DOB is used for age rules; no new identity-document collection was added. | Frontend/server validation reviewed. Business retention schedules and existing verification workflows need continued review. |
-| 8. Third-party SDKs | Removed remote font calls and LinkedIn embed; locally hosted fonts and Three.js; documented active providers below. Updated vulnerable Admin development dependencies. | Admin npm audit reports zero vulnerabilities at this build. This is not an audit-zero claim for every repository or provider. |
+| 8. Third-party SDKs | Removed remote font calls and LinkedIn embed; locally hosted fonts and Three.js; documented active providers below. Applied compatible security updates to the four application dependency trees and patched backend authentication, settings and upload libraries. | The final npm audits for Wisers, BSCAN, Admin and Console report zero known vulnerabilities. The isolated backend dependency audit also reports zero after the patches. Provider infrastructure and future advisories remain outside this snapshot. |
 | 9. Dark patterns | Optional marketing defaults off, preferences can be withdrawn, account deletion explains shared scope, fake ad-personalisation switches removed from Wisers. | UI and server checks; essential account/security emails are explained separately. |
 | 10. Hidden fees | Added renewal, total/tax, cancellation and refund information around paid plan choices. | Existing checkout determines the actual total before payment; no paid transaction was exercised. |
 | 11. Fake reviews | No static customer-review claims found in the inspected landing content; illustrative Wisers card remains labelled as a sample. | User-generated content and future imported reviews need ongoing moderation and authenticity checks. |
@@ -47,7 +47,7 @@ This is an implementation and evidence record, not a declaration of complete leg
 
 ## Validation
 
-- Wisers: 147 unit tests; BSCAN: 114; Admin: 55; shared API privacy suite: 25. Console: 3 offline privacy/auth checks. Total: 344 passing tests.
+- Wisers: 147 unit tests; BSCAN: 114; Admin: 55; shared API privacy/compatibility suite: 28. Console: 3 offline privacy/auth checks. Total: 347 passing tests.
 - Type checks and production builds passed for Wisers, BSCAN, Admin and Console. Help static generation passed.
 - Corporate HTML references/IDs/main landmarks checked. Forty mocked browser audit runs across six sites found no axe violations or runtime errors in the tested flows.
 - Backend tests used mocked databases/mail delivery and bypassed legacy live-login fixtures. No real customer account was changed, deleted or emailed by verification. Console checks also confirm that network failures cannot report a saved preference and sign-out waits for server session clearance.
