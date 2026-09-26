@@ -138,8 +138,8 @@ function renderIntro() {
         <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-13 2 8h6"/></svg>
       </div>
       <div class="eyebrow">Enquiry intake</div>
-      <h1>Expert IT talent and technology, on demand.</h1>
-      <p class="sub intro-sub">A few quick choices, then your details. A person from our team replies within one working day.</p>
+      <h1>Tell us what you need to build.</h1>
+      <p class="sub intro-sub">Choose a service, describe the scope and leave your contact details.</p>
       <button class="cta" id="startBtn" type="button">Start</button>
       <div class="meta">Balancewise Ltd &middot; England and Wales &middot; Company 16164776</div>
     </div>`;
@@ -221,7 +221,7 @@ function renderContact() {
         <input type="checkbox" id="f-consent">
         <span>I have read the <a href="${PRIVACY_URL}" target="_blank" rel="noopener">privacy policy</a> and agree to be contacted about this enquiry. This does not sign me up for marketing.</span>
       </label>
-      <div class="turnstile-box" id="turnstile-widget" aria-label="Human verification"></div>
+      <div class="turnstile-box" id="turnstile-widget" role="group" aria-label="Human verification"></div>
       <p class="verification-error hidden" id="verificationError"></p>
       <button class="cta" id="submitBtn" type="button">${applicant ? 'Send my application' : 'Send my enquiry'}</button>
       <div class="nav"><button class="back" id="backBtn" type="button">&larr; Back</button></div>
@@ -381,7 +381,7 @@ function renderDone() {
       </div>
       <div class="eyebrow">Received</div>
       <h1>${applicant ? 'Application received.' : "You're in. We'll be in touch."}</h1>
-      <p class="sub done-sub">Thanks ${esc(firstName)}. This is with our team and we aim to reply within one working day.</p>
+      <p class="sub done-sub">Thanks ${esc(firstName)}. Your enquiry has reached our team. We will contact you using the details you provided.</p>
       <div class="meta">Sent securely to Balancewise &middot; <b>${esc(contact.email)}</b></div>
     </div>`;
   stepCount.textContent = '';

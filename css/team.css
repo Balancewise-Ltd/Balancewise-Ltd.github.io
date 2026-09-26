@@ -11,7 +11,7 @@
   margin-bottom: 0;
 }
 .tc-desc a {
-  color: var(--blue2);
+  color: var(--blue);
   font-weight: 600;
   text-decoration: none;
 }
@@ -46,31 +46,15 @@
 /* Founder card — featured treatment */
 .team-card--founder {
   background: var(--card-bg);
-  border: 2px solid var(--blue2);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 2.25rem;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.team-card--founder::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--navy), var(--blue2), var(--gold));
-}
-.team-card--founder::after {
-  content: '';
-  position: absolute;
-  top: -60px; right: -60px;
-  width: 180px; height: 180px;
-  background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
 .team-card--founder:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(37,99,235,0.12);
+  box-shadow: none;
 }
 
 /* Founder header row */
@@ -81,11 +65,11 @@
   margin-bottom: 1.25rem;
 }
 .tc-header-text .tc-role {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--blue2);
+  color: var(--blue);
   margin-bottom: 0.15rem;
 }
 .tc-header-text .tc-name {
@@ -119,12 +103,12 @@
   gap: 0.5rem;
   margin: 1.25rem 0;
   padding: 1rem;
-  background: linear-gradient(135deg, rgba(8,19,54,0.04) 0%, rgba(37,99,235,0.04) 100%);
+  background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 10px;
 }
 [data-theme="dark"] .tc-reach {
-  background: linear-gradient(135deg, rgba(37,99,235,0.06) 0%, rgba(245,158,11,0.04) 100%);
+  background: var(--bg2);
 }
 .tc-reach-item {
   display: flex;
@@ -134,15 +118,6 @@
   font-weight: 600;
   color: var(--text-main);
 }
-.tc-reach-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.tc-reach-dot--uk { background: #2563eb; }
-.tc-reach-dot--us { background: #ef4444; }
-.tc-reach-dot--ca { background: #f59e0b; }
-.tc-reach-dot--global { background: #4ade80; }
 
 /* Enhanced tags */
 .tc-tags--bold {
@@ -154,7 +129,7 @@
 .tc-tags--bold span {
   background: var(--blue2);
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 0.22rem 0.7rem;
@@ -174,7 +149,8 @@
 
 /* ── NETWORK CARD ── */
 .team-card--network {
-  background: linear-gradient(150deg, var(--navy) 0%, var(--navy2) 100%);
+  color:#f4f1e9;
+  background: #172735;
   border: 2px solid rgba(255,255,255,0.1);
   border-radius: 16px;
   padding: 2.25rem;
@@ -184,24 +160,8 @@
   flex-direction: column;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.team-card--network::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--gold), var(--blue3));
-}
-.team-card--network::after {
-  content: '';
-  position: absolute;
-  bottom: -40px; right: -40px;
-  width: 160px; height: 160px;
-  background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
 .team-card--network:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(8,19,54,0.4);
+  box-shadow: none;
 }
 
 .tc-net-icon {
@@ -259,11 +219,11 @@
   margin-bottom: 0.2rem;
 }
 .tc-net-stat-lbl {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: #bcc9d3;
 }
 
 /* Network tags */
@@ -277,7 +237,7 @@
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
   color: rgba(255,255,255,0.75);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 600;
   padding: 0.2rem 0.6rem;
   border-radius: 5px;

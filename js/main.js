@@ -35,7 +35,7 @@ document.getElementById('themeToggleMobile')?.addEventListener('click', () => {
   try { localStorage.setItem('bwt-theme', next); } catch {}
   setThemeIcon(next);
   const label = document.getElementById('themeLabel');
-  if (label) label.textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+  if (label) label.textContent = next === 'dark' ? 'Light mode' : 'Dark mode';
 });
 
 // Native pointer and keyboard navigation.
@@ -67,18 +67,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click
   target.focus({ preventScroll: true });
   target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 }));
-
-// ── SCROLL REVEAL ──
-const revObs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const d = parseFloat(entry.target.dataset.delay || 0) * 1000;
-      setTimeout(() => entry.target.classList.add('in'), d);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.rev, .rev-r').forEach(el => revObs.observe(el));
 
 // Input validation visual feedback
 document.querySelectorAll('input[required], textarea[required]').forEach(el => {
