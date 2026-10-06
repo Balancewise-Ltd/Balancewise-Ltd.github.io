@@ -568,25 +568,21 @@ section { padding: 5.5rem 5%; padding-block:   64px; }
 .process-step p  { font-size: 0.78rem; color: var(--text-body); line-height: 1.6; }
 
 /* ── SERVICES DETAIL ── */
-.services-detail { display: grid; gap: 1.3rem; }
+.services-detail {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
 
 .service-detail {
-  display: grid; grid-template-columns: 76px 1fr; gap: 2.5rem;
+  min-width: 0;
   background: var(--card-bg); border: 1.5px solid var(--border);
   border-radius: 14px; padding: 2rem;
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  align-items: start;
 }
 .service-detail:hover { border-color: #93c5fd; box-shadow: none; }
 
-.sd-icon {
-  width: 76px; height: 76px; background: #eff6ff;
-  border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2rem; flex-shrink: 0;
-}
-[data-theme="dark"] .sd-icon { background: rgba(37,99,235,0.15); }
-
+.sd-body { overflow-wrap: anywhere; }
 .sd-body h3 { font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.6rem; }
 .sd-body p  { font-size: 0.9rem; color: var(--text-body); line-height: 1.75; margin-bottom: 1rem; }
 .sd-list { list-style: none; margin-bottom: 1.2rem; }
@@ -928,6 +924,7 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1200px) {
+  .nav-menu { gap: 1rem; }
   .hero { grid-template-columns: 1fr; }
   .hero-panel { display: none; }
   .contract-grid { grid-template-columns: 1fr 1fr; }
@@ -951,6 +948,7 @@ footer {
   }
   .nav-menu.open a { font-size: 1rem; }
   .section-header { grid-template-columns: 1fr; }
+  .services-detail { grid-template-columns: minmax(0, 1fr); }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .ai-grid { grid-template-columns: 1fr 1fr; }
   .ai-demo-layout { grid-template-columns: 1fr; gap: 3rem; }
@@ -974,13 +972,12 @@ footer {
     align-self: stretch;
     width: 100%;
   }
-  .service-detail { grid-template-columns: 1fr; }
-  .sd-icon { width: 56px; height: 56px; font-size: 1.5rem; }
+  .service-detail { padding: 1.5rem; }
   .hero-h1 { font-size: 2.2rem; }
   .team-network { flex-direction: column; text-align: center; }
 }
 @media (max-width: 420px) {
-  .nav-brand { font-size: 0.75rem; }
+  .nav-brand { font-size: 0.75rem; white-space: normal; flex-shrink: 1; }
   .hero-h1 { font-size: 1.85rem; line-height: 1.1; }
   .hero-badge {
     font-size: .75rem;
