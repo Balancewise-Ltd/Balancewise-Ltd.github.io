@@ -1,6 +1,6 @@
 {
   "title": "Robotics — one small step",
-  "version": "kv6022-2026-10-11-v1",
+  "version": "balancewise-robotics-2026-10-11-v1",
   "weeks": [
     {
       "number": 1,
@@ -11,7 +11,7 @@
           "id": "w1-s1",
           "title": "What this course teaches and how we will follow it",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "1–11"
           },
           "cards": [
@@ -19,7 +19,7 @@
               "title": "Your first small idea",
               "text": [
                 "A robot is a machine that senses something, computes what to do and produces an action. Autonomous means it can carry out a task using its own decisions, within the limits people set.",
-                "KV6022 focuses on mobile robots: robots that travel. Our main examples move on a flat, two-dimensional surface. Two-dimensional means we describe the floor using two directions, x and y."
+                "This game focuses on mobile robots: robots that travel. Our main examples move on a flat, two-dimensional surface. Two-dimensional means we describe the floor using two directions, x and y."
               ],
               "kind": "friendly"
             },
@@ -34,8 +34,8 @@
             {
               "title": "Five learning outcomes in plain words",
               "text": [
-                "ML01: understand robot systems and the software used to build them. ML02: consider effects on people, including safety, privacy and fairness.",
-                "ML03: judge how well a robot design meets its purpose. ML04: choose and analyse sensors and algorithms; an algorithm is a sequence of steps for solving a problem. ML05: investigate independently and question evidence.",
+                "Goal 1: understand robot systems and the software used to build them. Goal 2: consider effects on people, including safety, privacy and fairness.",
+                "Goal 3: judge how well a robot design meets its purpose. Goal 4: choose and analyse sensors and algorithms; an algorithm is a sequence of steps for solving a problem. Goal 5: investigate independently and question evidence.",
                 "Example of ethics: a road camera may capture people. Explain what data the project needs and avoid collecting more than the task requires."
               ],
               "kind": "friendly"
@@ -50,10 +50,10 @@
               "kind": "friendly"
             },
             {
-              "title": "Support and why the module matters",
+              "title": "Finding support and useful reading",
               "kind": "friendly",
               "text": [
-                "The teaching slides name Dr Bing Zhai as module tutor and direct you to Blackboard slides, workshop feedback, project guidance and the university reading list. The main textbook is Introduction to Autonomous Mobile Robots by Siegwart, Nourbakhsh and Scaramuzza.",
+                "Use the explanations, worked examples and research links in this game to support your study. For a deeper treatment, a useful textbook is Introduction to Autonomous Mobile Robots by Siegwart, Nourbakhsh and Scaramuzza.",
                 "The lecture connects these skills to factory automation, agriculture, healthcare, autonomous driving and Industry 4.0: industry using connected digital systems. Its Monday lecture and Tuesday workshop schedule is printed source information; check your current timetable for attendance."
               ]
             }
@@ -77,12 +77,12 @@
             {
               "prompt": "Your system works, but records unnecessary images of people. Which outcome asks you to think about that?",
               "choices": [
-                "ML02: ethical and social implications",
-                "ML03: evaluate the design only",
+                "Goal 2: ethical and social implications",
+                "Goal 3: evaluate the design only",
                 "No course outcome"
               ],
               "answer": 0,
-              "why": "ML02 asks how a robot affects people as well as whether it functions.",
+              "why": "Ethical reasoning asks how a robot affects people as well as whether it functions.",
               "remediate": "Ethics means considering effects on people. Privacy is one example."
             },
             {
@@ -103,7 +103,7 @@
           "id": "w1-s2",
           "title": "Your road inspection project and the evidence it needs",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "12–16"
           },
           "cards": [
@@ -127,7 +127,7 @@
               "title": "What the supplied Week 1 lecture says",
               "text": [
                 "The lecture specifies an individual 3500-word research report worth 65%, and a robot demonstration worth 35%. It states five minutes per student plus questions and submission of a video demonstration.",
-                "These figures are from the supplied Week 1 lecture, pages 12–15. Use the current Blackboard assessment brief for deadlines, detailed marking criteria and any later changes; those were not supplied as a separate brief here."
+                "These figures are from the supplied Week 1 lecture, pages 12–15. Use the current project assessment brief for deadlines, detailed marking criteria and any later changes; those were not supplied as a separate brief here."
               ],
               "kind": "friendly"
             },
@@ -186,7 +186,7 @@
           "id": "w1-s3",
           "title": "Mobile robots and their three questions",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "17–20"
           },
           "cards": [
@@ -268,7 +268,7 @@
           "id": "w1-s4",
           "title": "Motion and perception: moving and measuring",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "21–24"
           },
           "cards": [
@@ -350,7 +350,7 @@
           "id": "w1-s5",
           "title": "Localisation, maps and routes",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "25–33"
           },
           "cards": [
@@ -432,7 +432,7 @@
           "id": "w1-s6",
           "title": "Demonstration: Linux and your desktop",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 1 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 1 Demonstration.pdf",
             "pages": "1–9"
           },
           "cards": [
@@ -514,7 +514,7 @@
           "id": "w1-s7",
           "title": "Demonstration: folders and terminal commands",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 1 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 1 Demonstration.pdf",
             "pages": "10–14"
           },
           "cards": [
@@ -533,7 +533,7 @@
                 "Tab can complete names. Ctrl+C interrupts a running foreground command. A simulator may keep occupying a terminal while it works; that is normal. Ctrl+Shift+T commonly opens a new terminal tab."
               ],
               "kind": "friendly",
-              "code": "pwd\nls\nls -a\ncd \"$HOME/Documents/KV6022 Robotics\"\npwd\nls"
+              "code": "pwd\nls\nls -a\ncd \"$HOME/Documents/Robotics Study\"\npwd\nls"
             },
             {
               "title": "Understand the other slide commands",
@@ -546,8 +546,8 @@
             {
               "title": "Spaces need quotes",
               "text": [
-                "The course folder name has a space. Quotes keep “KV6022 Robotics” together as one path instead of two separate command arguments.",
-                "An argument is extra information passed to a command. In cd \"$HOME/Documents/KV6022 Robotics\", $HOME expands to your home directory and the quotes protect the whole path. Container HOME refers to its dedicated home; use the document path from the host."
+                "The course folder name has a space. Quotes keep “Robotics Study” together as one path instead of two separate command arguments.",
+                "An argument is extra information passed to a command. In cd \"$HOME/Documents/Robotics Study\", $HOME expands to your home directory and the quotes protect the whole path. Container HOME refers to its dedicated home; use the document path from the host."
               ],
               "kind": "friendly"
             }
@@ -569,7 +569,7 @@
               "remediate": "pwd means print working directory."
             },
             {
-              "prompt": "Why quote a path containing KV6022 Robotics?",
+              "prompt": "Why quote a path containing Robotics Study?",
               "choices": [
                 "Quotes make the folder hidden",
                 "Quotes let the shell treat the space-containing path as one argument",
@@ -597,7 +597,7 @@
           "id": "w1-s8",
           "title": "Demonstration: what ROS adds",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 1 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 1 Demonstration.pdf",
             "pages": "15–22"
           },
           "cards": [
@@ -686,7 +686,7 @@
           "id": "w1-s9",
           "title": "Demonstration: the ROS ecosystem and communication",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 1 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 1 Demonstration.pdf",
             "pages": "23–34"
           },
           "cards": [
@@ -768,7 +768,7 @@
           "id": "w1-s10",
           "title": "Demonstration: installing a package versus building source",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 1 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 1 Demonstration.pdf",
             "pages": "35–37"
           },
           "cards": [
@@ -844,14 +844,7 @@
               "remediate": "Underscores can be in the ROS name; apt uses hyphens in this pattern."
             }
           ],
-          "research": [
-            {
-              "title": "Lecturer Workshop 1: introduction",
-              "url": "https://github.com/kivrakh/KV6022_limo_ros2/wiki/Workshop-1-%E2%80%90-Introduction",
-              "addition": "Checked the original workshop: terminal practice, Turtlesim and Gazebo introduce ROS concepts. Added its primary-source link as optional practice; adapt installation steps to the existing Humble container.",
-              "anchor": "Week 1 demonstration pp35–37; optional practical context"
-            }
-          ]
+          "research": []
         }
       ]
     },
@@ -864,7 +857,7 @@
           "id": "w2-s1",
           "title": "Locomotion: choosing a way to move",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
+            "file": "Robotics & Automation - Week 2 2026 lecture.pdf",
             "pages": "1–7"
           },
           "cards": [
@@ -946,7 +939,7 @@
           "id": "w2-s2",
           "title": "Legs, joints and balance",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
+            "file": "Robotics & Automation - Week 2 2026 lecture.pdf",
             "pages": "8–12"
           },
           "cards": [
@@ -1028,7 +1021,7 @@
           "id": "w2-s3",
           "title": "Flying and swimming robots",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
+            "file": "Robotics & Automation - Week 2 2026 lecture.pdf",
             "pages": "13–16"
           },
           "cards": [
@@ -1110,7 +1103,7 @@
           "id": "w2-s4",
           "title": "Wheels and their movement freedoms",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
+            "file": "Robotics & Automation - Week 2 2026 lecture.pdf",
             "pages": "17–20"
           },
           "cards": [
@@ -1192,7 +1185,7 @@
           "id": "w2-s5",
           "title": "Stability, manoeuvrability and motion constraints",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
+            "file": "Robotics & Automation - Week 2 2026 lecture.pdf",
             "pages": "21–23"
           },
           "cards": [
@@ -1274,7 +1267,7 @@
           "id": "w2-s6",
           "title": "Wheel arrangements and robot examples",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
+            "file": "Robotics & Automation - Week 2 2026 lecture.pdf",
             "pages": "24–35"
           },
           "cards": [
@@ -1356,7 +1349,7 @@
           "id": "w2-s7",
           "title": "Demonstration: build tools and the exact workspace tree",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 2 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 2 Demonstration.pdf",
             "pages": "1–6"
           },
           "cards": [
@@ -1379,11 +1372,11 @@
             {
               "title": "Keep exactly this layout",
               "text": [
-                "The lecture diagram’s ros2_workspace is a generic name. The course workspace is KV6022_limo_ros2. All seven source packages go inside src; build, install and log are sibling folders created by the build process.",
+                "Use robotics_ws as an example workspace name, and substitute your own workspace path. Source packages go inside src; build, install and log are sibling folders created by the build process. The example packages shown here must be supplied separately for practical work.",
                 "build holds build outputs and intermediate work. install holds installed package resources and environment setup scripts. log holds build records. README.md introduces the project; wiki_images stores supporting images. Do not move package source into build or flatten the live workspace."
               ],
               "kind": "friendly",
-              "code": "KV6022_limo_ros2/\n├── src/\n│   ├── example_codes/\n│   ├── KV6022_assessment/\n│   ├── limo_description/\n│   ├── limo_gazebosim/\n│   ├── limo_msgs/\n│   ├── trajectory_referee/\n│   └── trajectory_skeleton/\n├── build/\n├── install/\n├── log/\n├── wiki_images/\n└── README.md"
+              "code": "robotics_ws/\n├── src/\n│   ├── example_codes/\n│   ├── limo_description/\n│   ├── limo_gazebosim/\n│   ├── limo_msgs/\n│   ├── trajectory_referee/\n│   └── trajectory_skeleton/\n├── build/\n├── install/\n├── log/\n├── wiki_images/\n└── README.md"
             },
             {
               "title": "Build then make packages visible",
@@ -1392,7 +1385,7 @@
                 "A shell is the command interpreter running inside a terminal. A new terminal needs the ROS environment and workspace overlay again. An overlay adds your packages on top of the base ROS installation. Read the sequence here before executing a later practical build."
               ],
               "kind": "friendly",
-              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/KV6022_limo_ros2\"\nsource install/setup.bash\n# Build only when practising a build from this workspace root:\n# colcon build --symlink-install\n# source install/setup.bash"
+              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/robotics_ws\"\nsource install/setup.bash\n# Build only when practising a build from this workspace root:\n# colcon build --symlink-install\n# source install/setup.bash"
             }
           ],
           "practice": {
@@ -1415,7 +1408,7 @@
               "prompt": "Where should you run colcon build for this workspace?",
               "choices": [
                 "Within any package’s test folder",
-                "At the KV6022_limo_ros2 workspace root",
+                "At the robotics_ws workspace root",
                 "Inside Gazebo’s screen"
               ],
               "answer": 1,
@@ -1447,7 +1440,7 @@
           "id": "w2-s8",
           "title": "Demonstration: packages and the supplied seven",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 2 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 2 Demonstration.pdf",
             "pages": "7–10"
           },
           "cards": [
@@ -1463,7 +1456,7 @@
               "title": "The actual course packages",
               "text": [
                 "limo_description stores the robot model: links, joints and geometry. limo_gazebosim supplies simulation worlds, launchers and integration. limo_msgs defines robot-specific messages.",
-                "trajectory_referee supplies reference routes and waypoint commands. trajectory_skeleton is the controller exercise. example_codes contains teaching examples. KV6022_assessment contains navigation and detector starters."
+                "trajectory_referee supplies reference routes and waypoint commands. trajectory_skeleton is the controller exercise. example_codes contains teaching examples. Inspect the packages in your own workspace to find the navigation and detector programs available to you."
               ],
               "kind": "friendly"
             },
@@ -1475,7 +1468,7 @@
                 "The exact slide exercise is shown below as a one-time package-creation example. Inside the sourced Humble container, first enter workspace/src. If mypkg already exists, inspect it rather than create it again. --build-type chooses Python packaging; --dependencies records the library the package needs."
               ],
               "kind": "friendly",
-              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/KV6022_limo_ros2\"\nsource install/setup.bash\nros2 pkg list\nros2 pkg executables KV6022_assessment\nros2 pkg executables trajectory_skeleton\n# One-time lecture exercise,only if mypkg does not already exist:\n# cd \"$HOME/KV6022_limo_ros2/src\"\n# ros2 pkg create mypkg --build-type ament_python --dependencies rclpy"
+              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/robotics_ws\"\nsource install/setup.bash\nros2 pkg list\nros2 pkg executables example_codes\nros2 pkg executables trajectory_skeleton\n# One-time lecture exercise,only if mypkg does not already exist:\n# cd \"$HOME/robotics_ws/src\"\n# ros2 pkg create mypkg --build-type ament_python --dependencies rclpy"
             },
             {
               "title": "A file is not automatically a ros2 run command",
@@ -1505,7 +1498,7 @@
             {
               "prompt": "Which command lists a package’s registered executables?",
               "choices": [
-                "ros2 pkg executables KV6022_assessment",
+                "ros2 pkg executables example_codes",
                 "pwd only",
                 "ros2 topic echo /scan"
               ],
@@ -1538,7 +1531,7 @@
           "id": "w2-s9",
           "title": "Demonstration: nodes, topics, services and actions",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 2 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 2 Demonstration.pdf",
             "pages": "11–19"
           },
           "cards": [
@@ -1573,7 +1566,7 @@
                 "With a simulator already running, inspect before commanding movement. A topic existing does not prove new messages are arriving. rqt_graph displays node/topic connections; some items may be hidden by its display filters."
               ],
               "kind": "friendly",
-              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/KV6022_limo_ros2\"\nsource install/setup.bash\nros2 node list\nros2 topic list -t\nros2 topic type /scan\nros2 topic info /scan\nros2 topic echo /scan --once\n# Optional graph view, if the tool is installed:\n# ros2 run rqt_graph rqt_graph"
+              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/robotics_ws\"\nsource install/setup.bash\nros2 node list\nros2 topic list -t\nros2 topic type /scan\nros2 topic info /scan\nros2 topic echo /scan --once\n# Optional graph view, if the tool is installed:\n# ros2 run rqt_graph rqt_graph"
             }
           ],
           "practice": {
@@ -1628,7 +1621,7 @@
           "id": "w2-s10",
           "title": "Demonstration: message fields, editing and source builds",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 2 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 2 Demonstration.pdf",
             "pages": "20–27"
           },
           "cards": [
@@ -1647,13 +1640,13 @@
                 "ros2 interface show TYPE prints the definition. Custom message source is commonly in a package’s msg folder; interface generation creates language-specific types. CMakeLists.txt configures generation for the CMake interface package."
               ],
               "kind": "friendly",
-              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/KV6022_limo_ros2\"\nsource install/setup.bash\nros2 interface list\nros2 interface packages\nros2 interface package limo_msgs\nros2 interface show geometry_msgs/msg/Twist\nros2 interface show geometry_msgs/msg/PoseStamped"
+              "code": "# On the Ubuntu host\ndistrobox enter ros-humble-limo\n# Now inside the Humble container\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/robotics_ws\"\nsource install/setup.bash\nros2 interface list\nros2 interface packages\nros2 interface package limo_msgs\nros2 interface show geometry_msgs/msg/Twist\nros2 interface show geometry_msgs/msg/PoseStamped"
             },
             {
               "title": "Edit source with context",
               "text": [
                 "An IDE is an integrated development environment: an editor with programming aids. VS Code and PyCharm are examples. Read package.xml, setup.py and launch files to see how a program is installed and started.",
-                "In the example Distrobox setup, edit the workspace on the host at ~/distrobox/ros-humble-limo/KV6022_limo_ros2. Inside the dedicated container it is $HOME/KV6022_limo_ros2. Adapt host paths to your own setup; do not create a second workspace by accident."
+                "In the example Distrobox setup, edit the workspace on the host at ~/distrobox/ros-humble-limo/robotics_ws. Inside the dedicated container it is $HOME/robotics_ws. Adapt host paths to your own setup; do not create a second workspace by accident."
               ],
               "kind": "friendly"
             },
@@ -1718,7 +1711,7 @@
           "id": "w3-s1",
           "title": "Part A · From motor turns to a position",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "1–5"
           },
           "cards": [
@@ -1781,13 +1774,14 @@
               "why": "A robot at the dock but facing sideways has the right position and the wrong pose.",
               "remediate": "Draw a dot for the location and an arrow for its direction. Together they represent pose."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s2",
           "title": "Radians · A different way to count a turn",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "6"
           },
           "cards": [
@@ -1854,13 +1848,14 @@
           "practice": {
             "prompt": "Convert 45° to radians without a calculator first.",
             "expected": "45 is one quarter of 180, so 45° = π/4 ≈ 0.785 rad."
-          }
+          },
+          "research": []
         },
         {
           "id": "w3-s3",
           "title": "Differential drive · Average moves, difference turns",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "7–9"
           },
           "cards": [
@@ -1935,13 +1930,14 @@
           "practice": {
             "prompt": "With v=0.30, ω=0.50 and b=0.20, reconstruct both rim speeds.",
             "expected": "ωb/2 = 0.05. Right = 0.35 m/s; left = 0.25 m/s."
-          }
+          },
+          "research": []
         },
         {
           "id": "w3-s4",
           "title": "Straight odometry · Split one movement into x and y",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "10"
           },
           "cards": [
@@ -2004,13 +2000,14 @@
               "why": "Odometry tracks the whole journey; each displacement starts at the previous endpoint.",
               "remediate": "Draw two connected arrows. The second arrow starts at the tip of the first."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s5",
           "title": "Turning odometry · A tiny curved step",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "11–13"
           },
           "cards": [
@@ -2080,13 +2077,14 @@
               "why": "Angle addition is meaningful only when both values use the same units.",
               "remediate": "You would not add metres to centimetres without conversion. Angles need the same care."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s6",
           "title": "Odometry drift · Counting is an estimate",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "14"
           },
           "cards": [
@@ -2149,13 +2147,14 @@
               "why": "A landmark supplies an external reference instead of only repeating the same wheel estimate.",
               "remediate": "Compare your counted steps with a signpost you recognise."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s7",
           "title": "Part B · Why a sideways command does not work",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "15–16"
           },
           "cards": [
@@ -2218,13 +2217,14 @@
               "why": "It can reach many poses even though its instantaneous sideways speed is constrained.",
               "remediate": "Parallel parking is a sequence of allowed movements that produces a sideways overall change."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s8",
           "title": "Open loop and closed loop · Check what happened",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "17"
           },
           "cards": [
@@ -2287,13 +2287,14 @@
               "why": "A controller can correct only as well as its model and timely measurements allow.",
               "remediate": "If the driver sees an old picture of the road, steering from it can still go wrong."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s9",
           "title": "Bang-bang and proportional control · How much to correct",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "18–19"
           },
           "cards": [
@@ -2356,13 +2357,14 @@
               "why": "It uses error direction without shrinking the command with the error size.",
               "remediate": "Imagine trying to park using only full throttle forward and full throttle backward."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s10",
           "title": "Choose a gain · Fast enough, gentle enough",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "20"
           },
           "cards": [
@@ -2425,13 +2427,14 @@
               "why": "Stability depends on the real system, not just the simplified lecture recurrence.",
               "remediate": "The model is a useful starting point. The actual motor and sensor timing must still be checked."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s11",
           "title": "Go to a pose · Distance, direction, final facing",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "21–22"
           },
           "cards": [
@@ -2501,13 +2504,14 @@
               "why": "The final desired heading must be included;−θ−α assumes θ_g=0.",
               "remediate": "Compare the requested final arrow with the direction of the straight arrival line."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s12",
           "title": "The pose controller · Turn these errors into motion",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+            "file": "Robotics & Automation - Week 3 2026_v3.pptx",
             "pages": "23–26"
           },
           "cards": [
@@ -2582,13 +2586,14 @@
           "practice": {
             "prompt": "Read the workshop sketch on original slide 26. Name four pieces still needed.",
             "expected": "Pose subscriber or TF feedback, a timer, valid pose/goal checks, and position/final-heading stopping logic with speed limits."
-          }
+          },
+          "research": []
         },
         {
           "id": "w3-s13",
           "title": "Demonstration · Publish and subscribe in Python",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 3 Demonstration.pdf",
             "pages": "2–6"
           },
           "cards": [
@@ -2683,7 +2688,7 @@
           "id": "w3-s14",
           "title": "Demonstration · Services and node parameters",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 3 Demonstration.pdf",
             "pages": "7–11"
           },
           "cards": [
@@ -2768,7 +2773,7 @@
           "id": "w3-s15",
           "title": "Demonstration · Launch a collection of nodes",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 3 Demonstration.pdf",
             "pages": "12–18"
           },
           "cards": [
@@ -2839,13 +2844,14 @@
               "why": "The foreground launch process owns the terminal until stopped.",
               "remediate": "A running simulator is doing its job even though you have not got a shell prompt back."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w3-s16",
           "title": "Demonstration · Twist and the actual controller skeleton",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 3 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 3 Demonstration.pdf",
             "pages": "19–20"
           },
           "cards": [
@@ -2921,7 +2927,8 @@
           "practice": {
             "prompt": "Without running the controller, trace sensor/TF data→error calculation→Twist publication in the skeleton.",
             "expected": "You can identify where current pose is read, where goal is stored, and where the placeholder command must become a control law."
-          }
+          },
+          "research": []
         }
       ]
     },
@@ -2934,7 +2941,7 @@
           "id": "w4-s1",
           "title": "What perception means",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4.pdf",
+            "file": "Robotics & Automation - Week 4.pdf",
             "pages": "2–5"
           },
           "cards": [
@@ -3016,7 +3023,7 @@
           "id": "w4-s2",
           "title": "Sensor jobs and the two classification questions",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4.pdf",
+            "file": "Robotics & Automation - Week 4.pdf",
             "pages": "6–9"
           },
           "cards": [
@@ -3102,7 +3109,7 @@
           "id": "w4-s3",
           "title": "Range sensors and ultrasound",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4.pdf",
+            "file": "Robotics & Automation - Week 4.pdf",
             "pages": "10–12"
           },
           "cards": [
@@ -3180,7 +3187,7 @@
           "id": "w4-s4",
           "title": "Laser scans, endpoints, 3D scanners and scan matching",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4.pdf",
+            "file": "Robotics & Automation - Week 4.pdf",
             "pages": "13–17"
           },
           "cards": [
@@ -3273,7 +3280,7 @@
           "id": "w4-s5",
           "title": "Cameras and wheel encoders",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4.pdf",
+            "file": "Robotics & Automation - Week 4.pdf",
             "pages": "18–21"
           },
           "cards": [
@@ -3351,7 +3358,7 @@
           "id": "w4-s6",
           "title": "IMU and GPS: motion clues and global location",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4.pdf",
+            "file": "Robotics & Automation - Week 4.pdf",
             "pages": "22–29"
           },
           "cards": [
@@ -3437,7 +3444,7 @@
           "id": "w4-s7",
           "title": "Demonstration: Gazebo, its interface and ROS sensor plugins",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 4 Demonstration.pdf",
             "pages": "2–9"
           },
           "cards": [
@@ -3473,7 +3480,7 @@
                 "The launch file defaults to simulation_table_with_obstacles.world. Sensor definitions are in src/limo_description/urdf/limo_gazebo.xacro; differential-drive definitions are in src/limo_description/urdf/limo_diff/limo_diff.gazebo."
               ],
               "kind": "friendly",
-              "code": "distrobox enter ros-humble-limo\n# Now inside the container:\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/KV6022_limo_ros2\"\nsource install/setup.bash\nros2 launch limo_gazebosim limo_gazebo_diff.launch.py"
+              "code": "distrobox enter ros-humble-limo\n# Now inside the container:\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/robotics_ws\"\nsource install/setup.bash\nros2 launch limo_gazebosim limo_gazebo_diff.launch.py"
             },
             {
               "title": "Version note",
@@ -3531,7 +3538,7 @@
           "id": "w4-s8",
           "title": "Demonstration: coordinate frames and the TF tree",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 4 Demonstration.pdf",
             "pages": "10–16"
           },
           "cards": [
@@ -3617,7 +3624,7 @@
           "id": "w4-s9",
           "title": "Demonstration: inspect TF and look up a transform",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 4 Demonstration.pdf",
             "pages": "17–23"
           },
           "cards": [
@@ -3704,7 +3711,7 @@
           "id": "w4-s10",
           "title": "Demonstration: nearest obstacle and an RViz marker",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 4 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 4 Demonstration.pdf",
             "pages": "24–25"
           },
           "cards": [
@@ -3800,7 +3807,7 @@
           "id": "w5-s1",
           "title": "Vision starts with numbers in a grid",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+            "file": "Robotics & Automation - Week 5.pdf",
             "pages": "2–12"
           },
           "cards": [
@@ -3886,7 +3893,7 @@
           "id": "w5-s2",
           "title": "Feature extraction and Gaussian smoothing",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+            "file": "Robotics & Automation - Week 5.pdf",
             "pages": "13–15"
           },
           "cards": [
@@ -3964,7 +3971,7 @@
           "id": "w5-s3",
           "title": "Sobel, Canny and thin edges",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+            "file": "Robotics & Automation - Week 5.pdf",
             "pages": "16–20"
           },
           "cards": [
@@ -4056,7 +4063,7 @@
           "id": "w5-s4",
           "title": "Classical detection: features, HoG, SVM, SIFT and BRIEF",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+            "file": "Robotics & Automation - Week 5.pdf",
             "pages": "21–28"
           },
           "cards": [
@@ -4149,7 +4156,7 @@
           "id": "w5-s5",
           "title": "Deep detection, YOLO and robustness",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+            "file": "Robotics & Automation - Week 5.pdf",
             "pages": "29–34"
           },
           "cards": [
@@ -4254,7 +4261,7 @@
           "id": "w5-s6",
           "title": "Extracting lines and fitting simple models",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+            "file": "Robotics & Automation - Week 5.pdf",
             "pages": "35–36"
           },
           "cards": [
@@ -4340,7 +4347,7 @@
           "id": "w5-s7",
           "title": "RANSAC: try, count, repeat",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+            "file": "Robotics & Automation - Week 5.pdf",
             "pages": "37–46"
           },
           "cards": [
@@ -4425,7 +4432,7 @@
           "id": "w5-s8",
           "title": "Demonstration: camera messages and calibration information",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 5 Demonstration.pdf",
             "pages": "2–3"
           },
           "cards": [
@@ -4525,7 +4532,7 @@
           "id": "w5-s9",
           "title": "Demonstration: choose the right rqt tool",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 5 Demonstration.pdf",
             "pages": "4–9"
           },
           "cards": [
@@ -4595,7 +4602,7 @@
           "id": "w5-s10",
           "title": "Demonstration: CvBridge between ROS and OpenCV",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 5 Demonstration.pdf",
             "pages": "10–11"
           },
           "cards": [
@@ -4674,12 +4681,6 @@
               "url": "https://github.com/ros-perception/vision_opencv/blob/humble/cv_bridge/python/cv_bridge/core.py",
               "addition": "Verified passthrough preserves pixel encoding while explicit bgr8 asks for BGR conversion.",
               "anchor": "Week 5 demo pp10–11"
-            },
-            {
-              "title": "Lecturer Workshop 5: robot perception and vision",
-              "url": "https://github.com/kivrakh/KV6022_limo_ros2/wiki/Workshop-5-%E2%80%90-Robot-Perception-and-Vision",
-              "addition": "Checked the original workshop camera/CvBridge tasks and its colour-contour exercise. Added the primary-source practice link; its ROS 1 documentation and newer detector dependencies require version checks.",
-              "anchor": "Week 5 demonstration pp10–14; optional practical context"
             }
           ]
         },
@@ -4687,7 +4688,7 @@
           "id": "w5-s11",
           "title": "Demonstration: RGB, HSV, colour masks and contours",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 5 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 5 Demonstration.pdf",
             "pages": "12–14"
           },
           "cards": [
@@ -4797,7 +4798,7 @@
           "id": "w6-s1",
           "title": "Enhancement Week · Rebuild the foundation",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "10"
           },
           "cards": [
@@ -4883,7 +4884,8 @@
           "practice": {
             "prompt": "On paper, explain one Week 1–5 concept without looking at the answer, then check its original section.",
             "expected": "You can state the meaning, the units if relevant, one worked example, and one common mistake."
-          }
+          },
+          "research": []
         }
       ]
     },
@@ -4895,7 +4897,7 @@
           "id": "w7-s1",
           "title": "Where am I? Position, heading and pose",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+            "file": "Robotics & Automation - Week 7.pdf",
             "pages": "2–7"
           },
           "cards": [
@@ -4969,13 +4971,14 @@
           "practice": {
             "prompt": "Describe your own pose in a room using position and facing direction.",
             "expected": "Give both a location and a direction, not only one."
-          }
+          },
+          "research": []
         },
         {
           "id": "w7-s2",
           "title": "Why wheel estimates drift",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+            "file": "Robotics & Automation - Week 7.pdf",
             "pages": "8–12"
           },
           "cards": [
@@ -5046,13 +5049,14 @@
               "why": "Each forward step follows the wrong direction, accumulating lateral error.",
               "remediate": "Draw two almost parallel lines from the same start and compare their separation far away."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w7-s3",
           "title": "The rotation–translation–rotation motion model",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+            "file": "Robotics & Automation - Week 7.pdf",
             "pages": "13–16"
           },
           "cards": [
@@ -5123,13 +5127,14 @@
               "why": "Small angle variations bend the collection of possible endpoint locations.",
               "remediate": "Hold a pen at the end of a ruler and rotate the ruler slightly: its tip traces an arc."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w7-s4",
           "title": "Belief, probability and the Gaussian bell",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+            "file": "Robotics & Automation - Week 7.pdf",
             "pages": "17–21"
           },
           "cards": [
@@ -5200,13 +5205,14 @@
               "why": "A density curve spreads probability over a continuum of values.",
               "remediate": "Shade a small range under the curve to represent its probability."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w7-s5",
           "title": "ACT predicts; SEE corrects",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+            "file": "Robotics & Automation - Week 7.pdf",
             "pages": "22–24"
           },
           "cards": [
@@ -5276,13 +5282,14 @@
               "why": "The raw products 0.4 and 0.1 total 0.5; dividing by that total gives 0.8 and 0.2.",
               "remediate": "Multiply first, add the results, then divide each result by the sum."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w7-s6",
           "title": "How sensor fusion balances two imperfect estimates",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+            "file": "Robotics & Automation - Week 7.pdf",
             "pages": "25–30"
           },
           "cards": [
@@ -5353,13 +5360,14 @@
               "why": "R = 0.01 is smaller than P⁻ = 0.04, so the sensor is treated as more precise.",
               "remediate": "A smaller spread means more confidence, provided the uncertainty model is honest."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w7-s7",
           "title": "Original lecture check: movement, wall and fused belief",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+            "file": "Robotics & Automation - Week 7.pdf",
             "pages": "31–39"
           },
           "cards": [
@@ -5430,13 +5438,14 @@
               "why": "The shown compatible Gaussian estimates multiply into a more concentrated compromise.",
               "remediate": "Imagine two imperfect clues agreeing on an overlapping region."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w7-s8",
           "title": "Demonstration: smoothing odometry with robot_localization",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 7 Demonstration.pdf",
             "pages": "1–3"
           },
           "cards": [
@@ -5520,7 +5529,7 @@
           "id": "w7-s9",
           "title": "Demonstration: probabilistic motion and laser scan matching",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 7 Demonstration.pdf",
             "pages": "4–5"
           },
           "cards": [
@@ -5590,13 +5599,14 @@
               "why": "The implementation can publish under configured names, which must match the filter inputs.",
               "remediate": "A data channel’s name on your machine is the one your subscriber must use."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w7-s10",
           "title": "Demonstration: the 15 switches in an EKF sensor mask",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 7 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 7 Demonstration.pdf",
             "pages": "6"
           },
           "cards": [
@@ -5667,7 +5677,8 @@
               "why": "Covariance acts as a confidence statement; false confidence distorts fusion.",
               "remediate": "A bad clue labelled extremely reliable can dominate a good clue."
             }
-          ]
+          ],
+          "research": []
         }
       ],
       "note": "Follows the lecture before the demonstration. The original pages 31–34 contain a graphical quiz, not an unseen numerical worksheet. Additional small numerical examples below are teaching aids."
@@ -5680,7 +5691,7 @@
           "id": "w8-s1",
           "title": "Map-based navigation and global localization",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+            "file": "Robotics & Automation - Week 8.pdf",
             "pages": "1–5"
           },
           "cards": [
@@ -5749,13 +5760,14 @@
               "why": "A missed count changes where the behavior stops.",
               "remediate": "Counting objects without checking location can shift the target by one."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s2",
           "title": "Ways to represent the map",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+            "file": "Robotics & Automation - Week 8.pdf",
             "pages": "6–11"
           },
           "cards": [
@@ -5825,13 +5837,14 @@
               "why": "Detail is concentrated where geometry requires it.",
               "remediate": "Use fine paper near a doorway and coarse paper in an empty room."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s3",
           "title": "Why a full pose grid becomes expensive",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+            "file": "Robotics & Automation - Week 8.pdf",
             "pages": "12–14"
           },
           "cards": [
@@ -5902,13 +5915,14 @@
               "why": "Samples approximate the belief with fewer candidates.",
               "remediate": "Keep a useful sample instead of an exhaustive list of millions of possibilities."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s4",
           "title": "Markov localization and different belief shapes",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+            "file": "Robotics & Automation - Week 8.pdf",
             "pages": "15–16"
           },
           "cards": [
@@ -5978,13 +5992,14 @@
               "why": "One stores environment occupancy; the other stores robot pose confidence.",
               "remediate": "Ask whether a value describes the wall or your possible location."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s5",
           "title": "Particles: a handful of possible robots",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+            "file": "Robotics & Automation - Week 8.pdf",
             "pages": "17–18"
           },
           "cards": [
@@ -6054,13 +6069,14 @@
               "why": "Two plausible rooms can have an implausible wall between them.",
               "remediate": "A location halfway between two good guesses is not automatically another good guess."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s6",
           "title": "Predict, update, resample and recover",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+            "file": "Robotics & Automation - Week 8.pdf",
             "pages": "19–22"
           },
           "cards": [
@@ -6131,13 +6147,14 @@
               "why": "Kidnapping can move the robot outside the current cloud’s represented region.",
               "remediate": "You cannot find another room if every guess stays in the first room."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s7",
           "title": "Follow the original 10,000-particle storyboard",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+            "file": "Robotics & Automation - Week 8.pdf",
             "pages": "23–43"
           },
           "cards": [
@@ -6208,13 +6225,14 @@
               "why": "AMCL particle limits depend on configuration and computational needs.",
               "remediate": "Separate a demonstration number from a compulsory setting."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s8",
           "title": "Demonstration: what AMCL needs and produces",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 8 Demonstration.pdf",
             "pages": "1–3"
           },
           "cards": [
@@ -6284,13 +6302,14 @@
               "why": "SLAM handles the coupled unknown-map problem separately.",
               "remediate": "AMCL asks where on this map; SLAM asks where and what map."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w8-s9",
           "title": "Demonstration: ROS 1 slide names versus Humble interfaces",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 8 Demonstration.pdf",
             "pages": "4–6"
           },
           "cards": [
@@ -6381,7 +6400,7 @@
           "id": "w8-s10",
           "title": "Demonstration: tune filter, laser and motion parameters",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 8 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 8 Demonstration.pdf",
             "pages": "7–9"
           },
           "cards": [
@@ -6452,7 +6471,8 @@
               "why": "Multiple configuration sources can affect the running node.",
               "remediate": "Inspect the final setting in the running system, not only one source file."
             }
-          ]
+          ],
+          "research": []
         }
       ],
       "note": "AMCL demonstration pages 4–9 contain ROS 1 names and parameters. Course concepts are preserved; ROS 2 Humble differences are explicitly marked."
@@ -6465,7 +6485,7 @@
           "id": "w9-s1",
           "title": "Estimate your place and draw the map together",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+            "file": "Robotics & Automation - Week 9.pdf",
             "pages": "1–7"
           },
           "cards": [
@@ -6544,13 +6564,14 @@
               "why": "The mapping problem may already be solved before navigation starts.",
               "remediate": "If someone gives you a good floor plan, you can locate yourself on it without drawing it again."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w9-s2",
           "title": "SLAM methods and where people use them",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+            "file": "Robotics & Automation - Week 9.pdf",
             "pages": "8–10"
           },
           "cards": [
@@ -6621,13 +6642,14 @@
               "why": "Different tasks need different state, sensor and map models.",
               "remediate": "A floor map does not represent all the degrees of motion of an aircraft."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w9-s3",
           "title": "Occupancy maps are built from many observations",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+            "file": "Robotics & Automation - Week 9.pdf",
             "pages": "11–18"
           },
           "cards": [
@@ -6712,7 +6734,7 @@
           "id": "w9-s4",
           "title": "Feature SLAM: the robot sees landmark A",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+            "file": "Robotics & Automation - Week 9.pdf",
             "pages": "19–23"
           },
           "cards": [
@@ -6783,13 +6805,14 @@
               "why": "The example anchors the starting pose while later measurement and motion uncertainty remain.",
               "remediate": "A fixed starting pin does not make every later step perfect."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w9-s5",
           "title": "Feature SLAM: move, observe B and C, keep correlations",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+            "file": "Robotics & Automation - Week 9.pdf",
             "pages": "24–27"
           },
           "cards": [
@@ -6860,13 +6883,14 @@
               "why": "A shared robot pose error can shift several mapped features together.",
               "remediate": "Draw two landmarks from the same wrong viewpoint: both move together."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w9-s6",
           "title": "Re-observe A: loop closure improves the shared map",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+            "file": "Robotics & Automation - Week 9.pdf",
             "pages": "28–30"
           },
           "cards": [
@@ -6936,13 +6960,14 @@
               "why": "A wrong correspondence supplies an incorrect constraint.",
               "remediate": "Matching one corridor to a different similar corridor bends the estimate the wrong way."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w9-s7",
           "title": "Original SLAM examples, interfaces and assigned reading",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+            "file": "Robotics & Automation - Week 9.pdf",
             "pages": "31–37"
           },
           "cards": [
@@ -7012,13 +7037,14 @@
               "why": "Feature-based estimates preserve the route structure better than the shown drifting odometry.",
               "remediate": "Repeated recognizable court features help correct movement errors."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w9-s8",
           "title": "Demonstration: SLAM Toolbox and processing modes",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 9 Demonstration.pdf",
             "pages": "1–3"
           },
           "cards": [
@@ -7103,7 +7129,7 @@
           "id": "w9-s9",
           "title": "Demonstration: configuration and expected messages",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 9 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 9 Demonstration.pdf",
             "pages": "4–5"
           },
           "cards": [
@@ -7175,7 +7201,8 @@
               "why": "Continuation/localization needs the saved internal map state described by the package.",
               "remediate": "Loading a graph restores relationships, not just picture pixels."
             }
-          ]
+          ],
+          "research": []
         }
       ],
       "note": "The lecture’s worked example is a visual EKF SLAM sequence with landmarks A, B and C. Added numerical examples are labelled as explanatory practice, not original worksheet answers."
@@ -7188,7 +7215,7 @@
           "id": "w10-s1",
           "title": "Choose actions that can actually reach the goal",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10.pdf",
+            "file": "Robotics & Automation - Week 10.pdf",
             "pages": "1–7"
           },
           "cards": [
@@ -7258,13 +7285,14 @@
               "why": "It specifies how motion proceeds over time, not only its shape.",
               "remediate": "A route says which street; a trajectory says how fast and when."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w10-s2",
           "title": "Global strategy and local reflexes",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10.pdf",
+            "file": "Robotics & Automation - Week 10.pdf",
             "pages": "8–11"
           },
           "cards": [
@@ -7335,13 +7363,14 @@
               "why": "Local actions can lack the long-range information needed to escape traps.",
               "remediate": "Avoiding every wall does not tell you which exit leads to the goal."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w10-s3",
           "title": "Bug2: go straight, follow the boundary, leave when progress is possible",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10.pdf",
+            "file": "Robotics & Automation - Week 10.pdf",
             "pages": "12–14"
           },
           "cards": [
@@ -7412,13 +7441,14 @@
               "why": "Completeness is about finding a solution, not minimizing its length.",
               "remediate": "Finding an exit and finding the shortest exit route are different goals."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w10-s4",
           "title": "Dynamic Window Approach: test possible speeds",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10.pdf",
+            "file": "Robotics & Automation - Week 10.pdf",
             "pages": "15–17"
           },
           "cards": [
@@ -7489,13 +7519,14 @@
               "why": "Sampling impossible controls does not create executable trajectories.",
               "remediate": "Only test moves the real platform can make."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w10-s5",
           "title": "DWA scores, local traps and the missed doorway",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10.pdf",
+            "file": "Robotics & Automation - Week 10.pdf",
             "pages": "18–26"
           },
           "cards": [
@@ -7566,13 +7597,14 @@
               "why": "Safety/feasibility constraints are prerequisites before comparing valid candidates.",
               "remediate": "Crossing a wall is not a good shortcut regardless of its score."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w10-s6",
           "title": "Nav2 connects navigation components",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10.pdf",
+            "file": "Robotics & Automation - Week 10.pdf",
             "pages": "27–31"
           },
           "cards": [
@@ -7643,13 +7675,14 @@
               "why": "Components can be configured before being enabled to process navigation work.",
               "remediate": "Prepare the system before asking it to act."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w10-s7",
           "title": "Demonstration: modular Nav2 and behavior-tree coordination",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 10 Demonstration.pdf",
             "pages": "1–2"
           },
           "cards": [
@@ -7720,13 +7753,14 @@
               "why": "A parameter block for a different node name may not configure the intended node.",
               "remediate": "Labels must match the mailbox receiving the configuration."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w10-s8",
           "title": "Demonstration: global planner, footprint and costmap",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 10 Demonstration.pdf",
             "pages": "3–4"
           },
           "cards": [
@@ -7811,7 +7845,7 @@
           "id": "w10-s9",
           "title": "Demonstration: local controller and rolling surroundings",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 10 Demonstration.pdf",
             "pages": "5–6"
           },
           "cards": [
@@ -7896,7 +7930,7 @@
           "id": "w10-s10",
           "title": "Demonstration: navigation cycle and careful tuning",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 10 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 10 Demonstration.pdf",
             "pages": "7–8"
           },
           "cards": [
@@ -7967,7 +8001,8 @@
               "why": "Several simultaneous changes make cause and effect difficult to identify.",
               "remediate": "One experiment should isolate one main change."
             }
-          ]
+          ],
+          "research": []
         }
       ],
       "note": "This week teaches local collision avoidance before the Nav2 demonstration. Lecture formulas added in examples are clearly separated from the slide’s own undefined score terms."
@@ -7980,7 +8015,7 @@
           "id": "w11-s1",
           "title": "Path planning: start, goal, world and allowed moves",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "1–5"
           },
           "cards": [
@@ -8050,13 +8085,14 @@
               "why": "A grid transition can require movement a real platform cannot perform directly.",
               "remediate": "A drawing’s shortcut still has to fit the machine."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s2",
           "title": "Turn the world into a graph",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "6–10"
           },
           "cards": [
@@ -8127,13 +8163,14 @@
               "why": "A discretized representation can merge distinct regions or remove narrow spaces.",
               "remediate": "Big squares cannot preserve every small gap."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s3",
           "title": "Lattice, visibility and sampled graphs",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "11–13"
           },
           "cards": [
@@ -8204,13 +8241,14 @@
               "why": "Validity must cover the whole motion, not just its start and end.",
               "remediate": "Two rooms can be free even though the wall between them is solid."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s4",
           "title": "Uninformed search: BFS and Dijkstra",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "14"
           },
           "cards": [
@@ -8280,13 +8318,14 @@
               "why": "Only then does fewer actions directly mean lower cost.",
               "remediate": "If each step costs one token, the fewest steps spend the fewest tokens."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s5",
           "title": "Breadth-first wavefront and search limits",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "15–20"
           },
           "cards": [
@@ -8357,13 +8396,14 @@
               "why": "Repeated branching multiplies: 2×2×2×2×2 = 32.",
               "remediate": "Every level doubles the possible nodes, so use a power rather than one multiplication."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s6",
           "title": "A*: cost so far plus an optimistic estimate",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "21–24"
           },
           "cards": [
@@ -8434,13 +8474,14 @@
               "why": "Optimism prevents the search from wrongly dismissing a genuinely cheaper route under the algorithm’s assumptions.",
               "remediate": "A lower-bound estimate can be too small but must not claim a larger unavoidable cost than reality."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s7",
           "title": "Original A* worked grid and its heuristic mismatch",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "25–27"
           },
           "cards": [
@@ -8515,13 +8556,14 @@
           "practice": {
             "prompt": "Redraw the 4×5 lecture grid and write g, h, f at each selected route cell.",
             "expected": "Reproduce the given 5.2 path and explain separately why its Manhattan heuristic does not have the usual admissibility guarantee."
-          }
+          },
+          "research": []
         },
         {
           "id": "w11-s8",
           "title": "RRT: grow a tree by testing sampled connections",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "28–31"
           },
           "cards": [
@@ -8612,7 +8654,7 @@
           "id": "w11-s9",
           "title": "Nav2 planner plugins and the reading checkpoint",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+            "file": "Robotics & Automation - Week 11.pdf",
             "pages": "32–34"
           },
           "cards": [
@@ -8683,13 +8725,14 @@
               "why": "The user asked to preserve the material, so the discrepancy is made explicit instead of silently changing it.",
               "remediate": "Teach the pages we have and label what their outline called them."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s10",
           "title": "Demonstration: Python Simple Commander",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 11 Demonstration.pdf",
             "pages": "1–4"
           },
           "cards": [
@@ -8716,7 +8759,7 @@
                 "These preparation commands preserve the established src/build/install/log workspace structure."
               ],
               "kind": "friendly",
-              "code": "# On the host:\ndistrobox enter ros-humble-limo\n\n# Inside that container:\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/KV6022_limo_ros2\"\nsource install/setup.bash\nros2 pkg executables nav2_simple_commander\nros2 pkg executables KV6022_assessment"
+              "code": "# On the host:\ndistrobox enter ros-humble-limo\n\n# Inside that container:\nsource /opt/ros/humble/setup.bash\ncd \"$HOME/robotics_ws\"\nsource install/setup.bash\nros2 pkg executables nav2_simple_commander\nros2 pkg executables example_codes"
             },
             {
               "title": "Names and script availability",
@@ -8761,13 +8804,14 @@
               "why": "The command enters the container; the later environment setup belongs inside it.",
               "remediate": "First enter the classroom, then use the tools inside the classroom."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w11-s11",
           "title": "Demonstration: send goals, read feedback, check the result",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 11 Demonstration.pdf",
             "pages": "5–6"
           },
           "cards": [
@@ -8865,7 +8909,7 @@
           "id": "w11-s12",
           "title": "Demonstration: frontier exploration combines SLAM and navigation",
           "source": {
-            "file": "KV6022 – Robotics & Automation - Week 11 Demonstration.pdf",
+            "file": "Robotics & Automation - Week 11 Demonstration.pdf",
             "pages": "7–8"
           },
           "cards": [
@@ -8940,7 +8984,8 @@
           "practice": {
             "prompt": "Explain the full course connection in your own words: sensors → belief/pose → map or SLAM → global path → local commands → exploration goals.",
             "expected": "Keep the roles distinct and explain how feedback loops update them. On a failed section quiz, reread that section from its first card and retry it before continuing."
-          }
+          },
+          "research": []
         }
       ],
       "note": "The supplied outline calls Week 11 behavior trees, but this original lecture is graph/path planning; the demonstration is Simple Commander and exploration. Preserve this actual sequence. Page 25’s Manhattan/diagonal example and page 20’s printed complexity notation need the explicit cautions below."
@@ -8955,7 +9000,7 @@
           "id": "w12-s1",
           "title": "Recap · One complete robot loop",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "10, 19–29"
           },
           "cards": [
@@ -9030,13 +9075,14 @@
           "practice": {
             "prompt": "Draw your end-to-end system, labelling each arrow with the actual message type and frame where relevant.",
             "expected": "You can trace observations through pose estimation and planning to/cmd_vel, and explain what proves completion."
-          }
+          },
+          "research": []
         },
         {
           "id": "w12-s2",
           "title": "Assessment support · Test one claim at a time",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "12–15"
           },
           "cards": [
@@ -9107,13 +9153,14 @@
               "why": "The current assignment brief was not supplied; lecture aims guide learning but do not replace official requirements.",
               "remediate": "Separate what the lecture states from extra suggestions for testing it."
             }
-          ]
+          ],
+          "research": []
         },
         {
           "id": "w12-s3",
           "title": "Assessment support · Explain, demonstrate, and reflect",
           "source": {
-            "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+            "file": "Robotics & Automation - Week 1 Student.pdf",
             "pages": "6, 12–15"
           },
           "cards": [
@@ -9188,90 +9235,91 @@
           "practice": {
             "prompt": "Give a 60-second explanation of your proposed system using only words you can define.",
             "expected": "You can state the mission, the sensor/pose/planning/control flow, the evidence collected, and one honest limitation."
-          }
+          },
+          "research": []
         }
       ]
     }
   ],
   "inventory": [
     {
-      "file": "KV6022 - Robotics & Automation - Week 1 Student.pdf",
+      "file": "Robotics & Automation - Week 1 Student.pdf",
       "description": "Original teaching file read, including essential diagrams: 33 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 1 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 1 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 37 pages."
     },
     {
-      "file": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
+      "file": "Robotics & Automation - Week 2 2026 lecture.pdf",
       "description": "Original teaching file read, including essential diagrams: 35 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 2 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 2 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 27 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx",
+      "file": "Robotics & Automation - Week 3 2026_v3.pptx",
       "description": "Original teaching file read, including essential diagrams: 29 slides."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 3 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 3 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 20 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 4.pdf",
+      "file": "Robotics & Automation - Week 4.pdf",
       "description": "Original teaching file read, including essential diagrams: 29 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 4 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 4 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 25 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 5.pdf",
+      "file": "Robotics & Automation - Week 5.pdf",
       "description": "Original teaching file read, including essential diagrams: 48 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 5 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 5 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 14 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 7.pdf",
+      "file": "Robotics & Automation - Week 7.pdf",
       "description": "Original teaching file read, including essential diagrams: 39 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 7 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 7 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 6 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 8.pdf",
+      "file": "Robotics & Automation - Week 8.pdf",
       "description": "Original teaching file read, including essential diagrams: 43 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 8 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 8 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 9 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 9.pdf",
+      "file": "Robotics & Automation - Week 9.pdf",
       "description": "Original teaching file read, including essential diagrams: 37 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 9 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 9 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 5 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 10.pdf",
+      "file": "Robotics & Automation - Week 10.pdf",
       "description": "Original teaching file read, including essential diagrams: 31 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 10 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 10 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 8 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 11.pdf",
+      "file": "Robotics & Automation - Week 11.pdf",
       "description": "Original teaching file read, including essential diagrams: 34 pages."
     },
     {
-      "file": "KV6022 – Robotics & Automation - Week 11 Demonstration.pdf",
+      "file": "Robotics & Automation - Week 11 Demonstration.pdf",
       "description": "Original teaching file read, including essential diagrams: 8 pages."
     }
   ]

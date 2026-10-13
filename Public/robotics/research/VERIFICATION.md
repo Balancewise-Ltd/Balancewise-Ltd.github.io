@@ -1,25 +1,62 @@
-# Public release verification — 11 October 2026
+# Release verification — 13 October 2026
 
-This release retains the private study game's 12 week slots, 112 sections, 455 teaching steps and 337 questions. Original documents are credited but not bundled. Private screenshots, setup records, local source audits and the source archive are excluded. Host-specific paths are replaced by sample paths. The engine is unchanged.
+The public game retains 12 weeks, 112 sections, 455 teaching steps and 337
+questions. Reference labels, practical workspace examples, progress storage and
+exports use neutral names. Older saved progress and compatible exported backups
+still migrate to the current format. Third-party materials retain their rights
+and attribution scope in `NOTICE.md`.
 
-The game was tested with JavaScriptCore 4.1: syntax, every section's wrong/correct paths, strict reading gates, retry resets, next-section unlocking, answer shuffling, progress validation/import/export, replay behaviour and the complete interface in a simulated document. Wheel-speed values and trajectories and the 20 ns / 3 m LiDAR example were checked.
+## Automated data and progress checks
 
-The public copy passed the same checks. Its local links, source metadata, counts, missing-file references, personal-path exclusion and standalone game links were checked. No robot commands were run.
+Run from the game folder with Node.js 18.17 or later:
 
-A graphical browser is unavailable in this execution environment, so rendered desktop/mobile screenshots were not captured. The interface was exercised in a JavaScript runtime with a simulated document; that is not a visual browser check.
-
-## Reproduce the runtime checks
-
-The website itself has no dependencies. The optional verification script needs Python, PyGObject and JavaScriptCore 4.1 bindings:
-
-```bash
-python3 research/verify-game.py
+```sh
+node research/verify-game.mjs
 ```
 
-The static answer data is inspectable. Progress remains in each browser, and devices do not automatically sync. Course assessment information is attributed to the supplied lecture, not a fresh assignment brief.
+The suite checks source/generated-data agreement, 517 topic-index entries, source
+aliases and every cited page range. Every section exercises reading gates, wrong
+answers, retry, correct completion and next-section unlocking. It also checks
+replay, import sanitization and compatibility with the previous progress schema.
 
-## Added-game improvements
+The full audio manifest contains 455 step recordings and 112 complete-section
+recordings. All 567 files are checked for inventory, sizes and SHA-256 hashes.
+The release audit also matched each recording's text fingerprint to the cleaned
+course text, decoded every MP3 with FFmpeg and checked its complete duration.
+No obsolete or partial recordings are included. Section recordings total about
+3.9 hours; the player downloads audio only when requested.
 
-Validated the 517-page index, all source names/counts, identical-file aliases, every section range and comma-separated review gaps. Regression checks ensure the four review citations name the Week 1 lecturer source. Audio was tested with a mocked browser speech API: supported and unsupported paths, small utterance chunks, preferred local English voice, current-card text, completion, explicit stop, navigation cancellation, stale callbacks and voice errors. Actual sound and rendered layout still require a browser on your computer.
+Use `--source-only` while preparing a course edit before rebuilding its audio.
+`python3 research/verify-game.py` remains a wrapper for the Node suite.
 
-The final curriculum has 33 distinct primary robotics research links, including the two verified workshop references. The speech specification is separate interface research. The added archive passed its source-data checks; its browser QA statement was not adopted as evidence.
+## Browser checks
+
+Real Chrome playback was exercised with generated MP3s, including pause/resume,
+seek, playback speed, explicit stop, hidden-tab playback and whole-section audio
+continuing across teaching-card navigation. Completing audio did not mark any
+questions or sections as passed. All 112 sections were also completed through
+their actual interface, including wrong-answer and retry paths.
+
+Additional checks covered blocked playback, missing audio and retry, stale play
+promise rejection, absent Media Session/Audio Session APIs, unavailable browser
+storage, migration of an actual previous-format save and import of an older
+backup. A 390 × 844 mobile viewport had no horizontal overflow, and the visible
+player layout was reviewed. No uncaught JavaScript exceptions were reported.
+
+Chrome in a Pixel 7a Android emulator kept playing with the launcher in the
+foreground. With the emulator's screen asleep and the debugger disconnected,
+the whole-section recording advanced from 25.86 to 32.42 seconds, crossing the
+first teaching-step boundary. This verifies the single-file background path
+without relying on JavaScript to start another recording.
+
+## Device limits and manual check
+
+The Android result is an emulator test. Physical Android phones and iPhone
+Safari were not tested for this release. Browser/OS audio policies, calls,
+other apps taking audio focus and closing the browser can interrupt playback.
+
+On a phone, open the live game in its normal browser, enter a lesson and tap
+**Listen to whole section**. Switch to another app, lock the screen and listen
+past a teaching-step boundary. Check any available lock-screen pause/resume and
+seek controls, then return to the lesson and confirm its progress is unchanged.
+The download link offers playback through the phone's own audio player.

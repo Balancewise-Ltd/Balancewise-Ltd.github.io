@@ -4,3 +4,17 @@
 @media(prefers-reduced-motion:no-preference){.sheet,.reward{animation:arrive .22s ease-out}@keyframes arrive{from{transform:translateY(7px);opacity:.6}to{transform:translateY(0);opacity:1}}}@media print{.topbar,footer,.sidebar,.answers,.actions,.mini-lab,.step-count{display:none}body{background:white}.sheet{border:0;box-shadow:none}main{max-width:none;padding:0}.layout{display:block}}
 
 .tiny-idea{font-size:19px;font-weight:550;line-height:1.65}.audio-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:24px 0}.audio-controls p{flex-basis:100%;margin:0}.slide-titles{max-height:260px;overflow-y:auto;padding-left:24px;font-size:14px}.slide-titles li{padding:7px 0;border-bottom:1px solid var(--line)}.slide-titles span{font-weight:650;display:block}.slide-index summary{font-size:14px}@media(max-width:720px){.tiny-idea{font-size:18px}}
+
+.has-narration{padding-bottom:var(--narration-height,240px)}
+.narration-player{position:fixed;bottom:0;left:0;right:0;z-index:15;background:var(--white);border-top:1px solid var(--line);box-shadow:0 -8px 28px #142c3c14;padding:14px 5vw calc(12px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:minmax(240px,1fr) auto;gap:8px 24px}
+.narration-player[hidden]{display:none}
+.narration-heading{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.narration-heading strong{font-size:16px;line-height:1.35;overflow-wrap:anywhere}
+.narration-heading .btn{padding:10px 14px;white-space:nowrap;min-height:44px;font-size:14px}
+.narration-player audio{width:100%;min-width:0;height:44px}
+.narration-options{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap}
+.narration-options select{min-height:44px;border:1px solid var(--line);border-radius:8px;padding:5px;background:var(--white);color:var(--ink)}
+.narration-options select:focus-visible{outline:3px solid #d37c16;outline-offset:3px}
+.narration-player p{grid-column:1/-1;margin:0;font-size:13px}
+@media(max-width:600px){.narration-player{grid-template-columns:minmax(0,1fr);gap:6px;padding-left:4vw;padding-right:4vw}.narration-heading strong{font-size:14px}.narration-options{justify-content:space-between}.narration-player p{font-size:12px}}
+@media print{.narration-player,.audio-controls{display:none!important}.has-narration{padding-bottom:0}}

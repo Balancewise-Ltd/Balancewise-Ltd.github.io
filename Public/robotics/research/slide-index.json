@@ -1,6 +1,6 @@
 {
   "documents": {
-    "KV6022 - Robotics & Automation - Week 1 Student.pdf": [
+    "Robotics & Automation - Week 1 Student.pdf": [
       {
         "page": 1,
         "title": "Part A – Module Introduction"
@@ -11,7 +11,7 @@
       },
       {
         "page": 3,
-        "title": "Module tutor: Dr. Bing Zhai"
+        "title": "Study support"
       },
       {
         "page": 4,
@@ -134,7 +134,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 1 Demonstration.pdf": [
+    "Robotics & Automation - Week 1 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Part A – Linux Basics"
@@ -284,7 +284,7 @@
         "title": "Installing from Source"
       }
     ],
-    "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf": [
+    "Robotics & Automation - Week 2 2026 lecture.pdf": [
       {
         "page": 1,
         "title": "Part A – Locomotion Concepts"
@@ -426,7 +426,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 2 Demonstration.pdf": [
+    "Robotics & Automation - Week 2 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Part A – ROS Concepts and Fundamentals:"
@@ -536,7 +536,7 @@
         "title": "Installing from Source"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 3 2026_v3.pptx": [
+    "Robotics & Automation - Week 3 2026_v3.pptx": [
       {
         "page": 1,
         "title": "Mobile Robot Kinematics"
@@ -651,10 +651,10 @@
       },
       {
         "page": 29,
-        "title": "KV6022 · WEEK 3"
+        "title": "Robotics · WEEK 3"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 3 Demonstration.pdf": [
+    "Robotics & Automation - Week 3 Demonstration.pdf": [
       {
         "page": 1,
         "title": "ROS Publisher/Subscriber/ Services / Parameters / Launch files."
@@ -736,7 +736,7 @@
         "title": "Velocity Commands"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 4.pdf": [
+    "Robotics & Automation - Week 4.pdf": [
       {
         "page": 1,
         "title": "Sensors for Mobile Robots"
@@ -854,7 +854,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 4 Demonstration.pdf": [
+    "Robotics & Automation - Week 4 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Part A – Gazebo Sensors, TF Transformation"
@@ -956,7 +956,7 @@
         "title": "TF Listeners and Publishers"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 5.pdf": [
+    "Robotics & Automation - Week 5.pdf": [
       {
         "page": 1,
         "title": "Robotic Perception: Image Processing & Computer Vision"
@@ -1150,7 +1150,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 5 Demonstration.pdf": [
+    "Robotics & Automation - Week 5 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Part A – Rqt tools, OpenCV with ROS 2"
@@ -1208,7 +1208,7 @@
         "title": "Finding contours"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 7.pdf": [
+    "Robotics & Automation - Week 7.pdf": [
       {
         "page": 1,
         "title": "Localization problem"
@@ -1366,7 +1366,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 7 Demonstration.pdf": [
+    "Robotics & Automation - Week 7 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Kalman Filter for position tracking (smoothing odometry)"
@@ -1392,7 +1392,7 @@
         "title": "Configure sensor inputs"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 8.pdf": [
+    "Robotics & Automation - Week 8.pdf": [
       {
         "page": 1,
         "title": "Probabilistic map-based localization"
@@ -1566,7 +1566,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 8 Demonstration.pdf": [
+    "Robotics & Automation - Week 8 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Map-based localisation with Particle Filter based algorithm"
@@ -1604,7 +1604,7 @@
         "title": "Parameters of AMCL package"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 9.pdf": [
+    "Robotics & Automation - Week 9.pdf": [
       {
         "page": 1,
         "title": "Figure / continuation"
@@ -1754,7 +1754,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 9 Demonstration.pdf": [
+    "Robotics & Automation - Week 9 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Demonstration to SLAM Toolbox (slam_toolbox) package"
@@ -1776,7 +1776,7 @@
         "title": "Configuration and Use"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 10.pdf": [
+    "Robotics & Automation - Week 10.pdf": [
       {
         "page": 1,
         "title": "Introduction to the robotic motion planning"
@@ -1902,7 +1902,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 10 Demonstration.pdf": [
+    "Robotics & Automation - Week 10 Demonstration.pdf": [
       {
         "page": 1,
         "title": "Introduction to Nav2"
@@ -1936,7 +1936,7 @@
         "title": "Tunable robot behaviors"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 11.pdf": [
+    "Robotics & Automation - Week 11.pdf": [
       {
         "page": 1,
         "title": "Path Planning problem"
@@ -2074,7 +2074,7 @@
         "title": "Thank you"
       }
     ],
-    "KV6022 – Robotics & Automation - Week 11 Demonstration.pdf": [
+    "Robotics & Automation - Week 11 Demonstration.pdf": [
       {
         "page": 1,
         "title": "ROS 2 Navigation with Simple Commander Python API"
@@ -2110,9 +2110,9 @@
     ]
   },
   "aliases": {
-    "KV6022 - Robotics & Automation - Week 2 2026 lecture-1.pdf": "KV6022 - Robotics & Automation - Week 2 2026 lecture.pdf",
-    "KV6022 – Robotics & Automation - Week 2 Demonstration(1).pdf": "KV6022 – Robotics & Automation - Week 2 Demonstration.pdf",
-    "KV6022 – Robotics & Automation - Week 4 Demonstration-1.pdf": "KV6022 – Robotics & Automation - Week 4 Demonstration.pdf",
-    "KV6022 – Robotics & Automation - Week 4-1.pdf": "KV6022 – Robotics & Automation - Week 4.pdf"
+    "Robotics & Automation - Week 2 2026 lecture-1.pdf": "Robotics & Automation - Week 2 2026 lecture.pdf",
+    "Robotics & Automation - Week 2 Demonstration(1).pdf": "Robotics & Automation - Week 2 Demonstration.pdf",
+    "Robotics & Automation - Week 4 Demonstration-1.pdf": "Robotics & Automation - Week 4 Demonstration.pdf",
+    "Robotics & Automation - Week 4-1.pdf": "Robotics & Automation - Week 4.pdf"
   }
 }
